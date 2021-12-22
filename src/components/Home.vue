@@ -1,34 +1,107 @@
 <template>
-  <div class="h-screen flex items-center justify-center">
-    <div>
-      <h1 class="font-bold text-5xl">
-        <VueTextGlitch fill="#F0F0F0" text="Raya Sabari" background></VueTextGlitch>
-      </h1>
-      <div>
-        <vue-typer
-          class="font-medium"
-          :text="['Full Stack Developer','Wordpress Developer']"
-          :repeat="Infinity"
-          :shuffle="false"
-          initial-action="typing"
-          :pre-type-delay="70"
-          :type-delay="70"
-          :pre-erase-delay="2000"
-          :erase-delay="70"
-          erase-style="backspace"
-          :erase-on-complete="false"
-          caret-animation="smooth"
-        ></vue-typer>
+  <div>
+    <div class="h-screen sm:h-screen flex">
+      <div class="m-auto text-center">
+        <transition name="fade">
+          <div v-show="isLoading == false">
+            <h1 class="font-semibold lg:text-7xl text-5xl -mb-1 text-white">
+              <VueTextGlitch fill="#F0F0F0" :text="nama" background></VueTextGlitch>
+            </h1>
+            <vue-typer
+              class="tracking-widest"
+              :text="tagline"
+              :repeat="Infinity"
+              :shuffle="false"
+              initial-action="typing"
+              :pre-type-delay="70"
+              :type-delay="70"
+              :pre-erase-delay="800"
+              :erase-delay="35"
+              erase-style="backspace"
+              :erase-on-complete="false"
+              caret-animation="smooth"
+            ></vue-typer>
+          </div>
+        </transition>
       </div>
     </div>
+    <!-- <div class="h-16 bg-pink-100 text-center p-5 sm:w-full">konten</div> -->
   </div>
 </template>
 
 <script>
 import VueTextGlitch from "vue-text-glitch";
+import Notiflix from "notiflix";
 export default {
   components: {
     VueTextGlitch,
+  },
+  data() {
+    return {
+      isLoading: false,
+      nama: "Raya Sabari",
+      tagline: [
+        "Full Stack Developer",
+        "Wordpress Developer",
+        "Mechanical Keyboards Enthusiast",
+      ],
+      customSvg: `
+            <svg version="1.1" id="L7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+      <path fill="#fff" d="M31.6,3.5C5.9,13.6-6.6,42.7,3.5,68.4c10.1,25.7,39.2,38.3,64.9,28.1l-3.1-7.9c-21.3,8.4-45.4-2-53.8-23.3
+        c-8.4-21.3,2-45.4,23.3-53.8L31.6,3.5z">
+            <animateTransform 
+              attributeName="transform" 
+              attributeType="XML" 
+              type="rotate"
+              dur="2s" 
+              from="0 50 50"
+              to="360 50 50" 
+              repeatCount="indefinite" />
+        </path>
+      <path fill="#fff" d="M42.3,39.6c5.7-4.3,13.9-3.1,18.1,2.7c4.3,5.7,3.1,13.9-2.7,18.1l4.1,5.5c8.8-6.5,10.6-19,4.1-27.7
+        c-6.5-8.8-19-10.6-27.7-4.1L42.3,39.6z">
+            <animateTransform 
+              attributeName="transform" 
+              attributeType="XML" 
+              type="rotate"
+              dur="1s" 
+              from="0 50 50"
+              to="-360 50 50" 
+              repeatCount="indefinite" />
+        </path>
+      <path fill="#fff" d="M82,35.7C74.1,18,53.4,10.1,35.7,18S10.1,46.6,18,64.3l7.6-3.4c-6-13.5,0-29.3,13.5-35.3s29.3,0,35.3,13.5
+        L82,35.7z">
+            <animateTransform 
+              attributeName="transform" 
+              attributeType="XML" 
+              type="rotate"
+              dur="2s" 
+              from="0 50 50"
+              to="360 50 50" 
+              repeatCount="indefinite" />
+        </path>
+      </svg>
+      `,
+    };
+  },
+  mounted() {
+    this.loading();
+  },
+  methods: {
+    loading() {
+      this.isLoading = true;
+      Notiflix.Loading.custom("Loading", {
+        backgroundColor: "transparent",
+        svgColor: "white",
+        messageColor: "white",
+        customSvgCode: this.customSvg,
+      });
+      Notiflix.Loading.remove(1500);
+      setTimeout(() => {
+        this.isLoading = false;
+      }, 1700);
+    },
   },
 };
 </script>
@@ -36,5 +109,12 @@ export default {
 <style>
 .vue-typer .custom.char {
   color: #f0f0f0;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>
