@@ -1,49 +1,34 @@
 <template>
-  <div>
-    <div class="h-screen sm:h-screen flex">
-      <div class="m-auto text-center">
-        <transition name="fade">
-          <div v-show="isLoading == false">
-            <h1 class="font-semibold lg:text-7xl text-5xl -mb-1 text-white">
-              <VueTextGlitch fill="#F0F0F0" :text="nama" background></VueTextGlitch>
-            </h1>
-            <vue-typer
-              class="tracking-widest"
-              :text="tagline"
-              :repeat="Infinity"
-              :shuffle="false"
-              initial-action="typing"
-              :pre-type-delay="70"
-              :type-delay="70"
-              :pre-erase-delay="800"
-              :erase-delay="35"
-              erase-style="backspace"
-              :erase-on-complete="false"
-              caret-animation="smooth"
-            ></vue-typer>
-          </div>
-        </transition>
+  <div class="text-center">
+    <transition name="fade">
+      <div v-show="isLoading == false">
+        <Glitch :text="nama"></Glitch>
+        <Typer :text="tagline"></Typer>
       </div>
-    </div>
+    </transition>
     <!-- <div class="h-16 bg-pink-100 text-center p-5 sm:w-full">konten</div> -->
   </div>
 </template>
 
 <script>
-import VueTextGlitch from "vue-text-glitch";
+import Glitch from "./partials/Glitch.vue";
+import Typer from "./partials/Typer.vue";
 import Notiflix from "notiflix";
 export default {
+  name: "Home",
   components: {
-    VueTextGlitch,
+    Glitch,
+    Typer,
   },
   data() {
     return {
-      isLoading: false,
+      isLoading: true,
       nama: "Raya Sabari",
       tagline: [
         "Full Stack Developer",
+        // "UI/UX Designer",
         "Wordpress Developer",
-        "Mechanical Keyboards Enthusiast",
+        "Based in Jakarta",
       ],
       customSvg: `
             <svg version="1.1" id="L7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -91,7 +76,7 @@ export default {
   methods: {
     loading() {
       this.isLoading = true;
-      Notiflix.Loading.custom("Loading", {
+      Notiflix.Loading.custom({
         backgroundColor: "transparent",
         svgColor: "white",
         messageColor: "white",
@@ -107,9 +92,6 @@ export default {
 </script>
 
 <style>
-.vue-typer .custom.char {
-  color: #f0f0f0;
-}
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 1s;

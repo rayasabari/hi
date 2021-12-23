@@ -1,17 +1,22 @@
 <template>
   <div id="app">
-    <Home></Home>
+    <div class="h-screen">
+      <Header class="absolute"></Header>
+      <Content></Content>
+    </div>
   </div>
 </template>
 
 <script>
-import Home from './components/Home.vue'
+import Header from "./components/Header.vue";
+import Content from "./components/Content.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    Home
-  }
-}
+    Header,
+    Content,
+  },
+};
 </script>
 
 <style>
