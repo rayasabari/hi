@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <div class="h-screen">
+    <div class>
       <Header class="absolute"></Header>
-      <Content></Content>
+      <Content class="h-screen"></Content>
     </div>
   </div>
 </template>
@@ -16,6 +16,8 @@ export default {
     Header,
     Content,
   },
+  mounted() {},
+  methods: {},
 };
 </script>
 

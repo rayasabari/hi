@@ -1,5 +1,5 @@
 <template>
-  <div class="text-gray-300 w-full flex flex-col lg:flex-row justify-between">
+  <header class="text-gray-300 w-full flex flex-col lg:flex-row justify-between">
     <div class="flex items-center justify-between px-6 py-4 lg:w-auto">
       <a href="#" class="font-medium">RYSB</a>
       <button @click="open = !open" class="block lg:hidden">
@@ -27,18 +27,26 @@
         </svg>
       </button>
     </div>
-    <div
+    <nav
       :class="open == false ? 'hidden' : ''"
       class="lg:flex flex-col lg:flex-row lg:items-center lg:text-base py-4"
     >
-      <div class="flex flex-col lg:flex-row lg:items-center">
-        <a href class="block px-6 py-2 text-gray-400 hover:text-gray-300">Home</a>
-        <a href class="block px-6 py-2 text-gray-400 hover:text-gray-300">About</a>
-        <a href class="block px-6 py-2 text-gray-400 hover:text-gray-300">Portofolio</a>
-        <a href class="block px-6 py-2 text-gray-400 hover:text-gray-300">Contacts</a>
-      </div>
-    </div>
-  </div>
+      <ul class="flex flex-col lg:flex-row lg:items-center text-right text-gray-400 hover:text-gray-300">
+        <li>
+          <a href class="block px-6 py-2">Home</a>
+        </li>
+        <li>
+          <a href class="block px-6 py-2">About</a>
+        </li>
+        <li>
+          <a href class="block px-6 py-2">Portofolio</a>
+        </li>
+        <li>
+          <a href class="block px-6 py-2">Contacts</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 </template>
 
 <script>
