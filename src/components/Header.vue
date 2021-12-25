@@ -31,18 +31,18 @@
       :class="open == false ? 'hidden' : ''"
       class="lg:flex flex-col lg:flex-row lg:items-center lg:text-base py-4"
     >
-      <ul class="flex flex-col lg:flex-row lg:items-center text-right text-gray-400 hover:text-gray-300">
+      <ul class="flex flex-col lg:flex-row lg:items-center text-right">
         <li>
-          <a href class="block px-6 py-2">Home</a>
+          <a href class="block px-6 py-2 text-gray-400 hover:text-gray-300">Home</a>
         </li>
         <li>
-          <a href class="block px-6 py-2">About</a>
+          <a href class="block px-6 py-2 text-gray-400 hover:text-gray-300">About</a>
         </li>
         <li>
-          <a href class="block px-6 py-2">Portofolio</a>
+          <a href class="block px-6 py-2 text-gray-400 hover:text-gray-300">Portofolio</a>
         </li>
         <li>
-          <a href class="block px-6 py-2">Contacts</a>
+          <a href class="block px-6 py-2 text-gray-400 hover:text-gray-300">Contacts</a>
         </li>
       </ul>
     </nav>
