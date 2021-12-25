@@ -1,8 +1,6 @@
 <template>
-  <div>
-    <h1 class="font-semibold lg:text-7xl text-5xl -mb-1">
-      <VueTextGlitch fill="#d1d5db" :text="text" background></VueTextGlitch>
-    </h1>
+  <div class="font-bold italic lg:text-8xl text-7xl tracking-wide -mb-3">
+    <VueTextGlitch fill="#d1d5db" :text="text" background highlight2="cyan"></VueTextGlitch>
   </div>
 </template>
 

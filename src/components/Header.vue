@@ -1,7 +1,7 @@
 <template>
-  <header class="text-gray-300 w-full flex flex-col lg:flex-row justify-between">
-    <div class="flex items-center justify-between px-6 py-4 lg:w-auto">
-      <a href="#" class="font-medium">RYSB</a>
+  <header class="text-gray-300 w-full flex flex-col lg:flex-row justify-between absolute">
+    <div class="flex items-center justify-between px-6 py-4 lg:w-auto animate__animated animate__fadeIn">
+      <a href="#" class="font-bold italic text-2xl">RYSB</a>
       <button @click="open = !open" class="block lg:hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -29,20 +29,20 @@
     </div>
     <nav
       :class="open == false ? 'hidden' : ''"
-      class="lg:flex flex-col lg:flex-row lg:items-center lg:text-base py-4"
+      class="lg:flex flex-col lg:flex-row lg:items-center lg:text-sm text-xl lg:py-4 font-light animate__animated animate__fadeIn"
     >
       <ul class="flex flex-col lg:flex-row lg:items-center text-right">
         <li>
-          <a href class="block px-6 py-2 text-gray-400 hover:text-gray-300">Home</a>
+          <a href class="block px-6 pb-3 lg:py-2 text-gray-400 hover:text-gray-300">About</a>
         </li>
         <li>
-          <a href class="block px-6 py-2 text-gray-400 hover:text-gray-300">About</a>
+          <a href class="block px-6 py-3 lg:py-2 text-gray-400 hover:text-gray-300">Skills</a>
         </li>
         <li>
-          <a href class="block px-6 py-2 text-gray-400 hover:text-gray-300">Portofolio</a>
+          <a href class="block px-6 py-3 lg:py-2 text-gray-400 hover:text-gray-300">Portofolio</a>
         </li>
         <li>
-          <a href class="block px-6 py-2 text-gray-400 hover:text-gray-300">Contacts</a>
+          <a href class="block px-6 py-3 lg:py-2 text-gray-400 hover:text-gray-300">Contacts</a>
         </li>
       </ul>
     </nav>
@@ -57,6 +57,7 @@ export default {
       open: false,
     };
   },
+  methods: {},
 };
 </script>
 

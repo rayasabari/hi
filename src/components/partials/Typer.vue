@@ -1,7 +1,7 @@
 <template>
   <div>
     <vue-typer
-      class="tracking-widest"
+      class="tracking-widest font-light"
       :text="text"
       :repeat="Infinity"
       :shuffle="false"

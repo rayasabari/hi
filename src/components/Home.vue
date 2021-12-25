@@ -23,8 +23,8 @@ export default {
     return {
       isLoading: true,
       showTyper: false,
-      nama: "Raya Sabari",
-      tagline: ["Full Stack Developer", "Based in Jakarta"],
+      nama: "RYSB",
+      tagline: ["Hi, I am Raya Sabari","A Full Stack Developer", "Based in Jakarta"],
       svgColor: '#d1d5db',
       customSvg: `
             <svg version="1.1" id="L7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"

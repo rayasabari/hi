@@ -1,16 +1,18 @@
 <template>
-  <main class="flex flex-col">
-    <Home class="m-auto"></Home>
-    <Footer></Footer>
+  <main class="w-full my-auto">
+    <Home></Home>
   </main>
 </template>
 
 <script>
 import Home from "./Home.vue";
-import Footer from "./Footer.vue";
+// import Footer from "./Footer.vue";
 export default {
   name: "Content",
-  components: { Home, Footer },
+  components: {
+    Home,
+    // Footer,
+  },
 };
 </script>
 

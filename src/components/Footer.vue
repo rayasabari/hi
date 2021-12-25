@@ -1,8 +1,10 @@
 <template>
-  <footer class="px-6 py-4 text-xs flex flex-col-reverse lg:flex-row lg:justify-between">
+  <footer
+    class="px-6 py-4 text-xs flex flex-col-reverse lg:flex-row lg:justify-between animate__animated animate__fadeIn"
+  >
     <div
-      class="text-gray-500 m-auto lg:m-0 items-end flex"
-    >&copy; Copyright {{ year }} Raya Sabari - All Rights Reserved.</div>
+      class="text-gray-500 m-auto lg:m-0 items-end flex font-light"
+    >&copy; {{ year }}. RYSB - All Rights Reserved.</div>
     <div
       class="text-gray-400 pb-3 lg:pb-0 flex w-40 lg:w-36 text-xl lg:text-base justify-between m-auto lg:m-0"
     >
