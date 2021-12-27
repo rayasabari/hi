@@ -25,6 +25,7 @@ export default {
 
 <style>
 .vue-typer .custom.char {
+  /* color: #fcd34d; */
   color: #9ca3af;
 }
 </style>
