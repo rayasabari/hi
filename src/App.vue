@@ -19,8 +19,18 @@ export default {
     Content,
     Footer,
   },
-  mounted() {},
-  methods: {},
+  mounted() {
+    this.setViewHeight();
+    window.addEventListener("resize", () => {
+      this.setViewHeight();
+    });
+  },
+  methods: {
+    setViewHeight: function () {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    },
+  },
 };
 </script>
 
