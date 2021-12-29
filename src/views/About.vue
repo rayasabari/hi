@@ -47,7 +47,7 @@ import Highlight from "../components/partials/Highlight.vue";
 export default {
   components: {
     Glitch,
-    Highlight,
+    Highlight
   },
 };
 </script>
