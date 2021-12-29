@@ -24,6 +24,7 @@ module.exports = {
       indigo: colors.indigo,
       purple: colors.violet,
       pink: colors.pink,
+      emerald: colors.emerald,
     },
     height: theme => ({
       auto: 'auto',
@@ -48,6 +49,9 @@ module.exports = {
     require('tailwind-scrollbar'),
   ],
   variants: {
-    scrollbar: ['rounded']
+    scrollbar: ['rounded'],
+    extend: {
+      transform: ['hover', 'focus'],
+    }
   }
 }

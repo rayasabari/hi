@@ -2,7 +2,7 @@
   <div class="text-gray-300 bg-yellow-30 animate__animated animate__fadeIn">
     <div class="h-90 flex flex-col items-center justify-center">
       <Glitch :text="nama"></Glitch>
-      <Typer class="font-scp text-base mt-1" :text="tagline"></Typer>
+      <Typer class="text-base" :text="tagline"></Typer>
     </div>
   </div>
 </template>
