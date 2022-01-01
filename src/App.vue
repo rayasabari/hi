@@ -3,10 +3,8 @@
     <div
       class="flex flex-col h-screen scrollbar-thin scrollbar-thumb-yellow-300 scrollbar-track-gray-900 scrollbar-thumb-rounded-full scrollbar-track-rounded-full"
     >
+      <Content v-if="isLoading == false"></Content>
       <Navbar></Navbar>
-      <main class="container m-auto">
-        <Content v-if="isLoading == false"></Content>
-      </main>
       <Footer></Footer>
     </div>
   </div>
@@ -80,7 +78,7 @@ export default {
     loading() {
       this.isLoading = true;
       Notiflix.Loading.custom({
-        backgroundColor: "transparent",
+        backgroundColor: "#111827",
         customSvgCode: this.customSvg,
       });
       Notiflix.Loading.remove(700);
@@ -91,3 +89,8 @@ export default {
   },
 };
 </script>
+<style>
+html {
+  scroll-behavior: smooth !important;
+}
+</style>

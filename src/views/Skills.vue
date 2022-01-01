@@ -1,6 +1,6 @@
 <template>
   <div class="text-gray-300 bg-yellow-30 animate__animated animate__fadeIn">
-    <div class="h-screen flex flex-col items-center justify-center">
+    <div id="skillstop" class="h-screen flex flex-col items-center justify-center">
       <Glitch text="SKILLS"></Glitch>
       <div class="font-light">
         <router-link to="/" class="text-gray-300">home</router-link> /

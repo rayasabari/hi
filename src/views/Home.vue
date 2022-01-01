@@ -1,6 +1,6 @@
 <template>
-  <div class="text-gray-300 bg-yellow-30 animate__animated animate__fadeIn">
-    <div class="h-90 flex flex-col items-center justify-center">
+  <div class="text-gray-300 h-screen flex items-center justify-center">
+    <div class="h-90 flex flex-col items-center justify-center animate__animated animate__fadeInUp">
       <Glitch :text="nama"></Glitch>
       <Typer class="text-base" :text="tagline"></Typer>
     </div>
@@ -18,9 +18,9 @@ export default {
   },
   data() {
     return {
-      nama: "RYSB",
+      nama: "HI",
       tagline: [
-        "Hi, I am Raya Sabari",
+        "I am Raya Sabari",
         "A Full Stack Developer",
         "Based in Jakarta",
       ],

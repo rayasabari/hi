@@ -43,6 +43,10 @@ module.exports = {
       fontFamily: {
         'poppins': ['"Poppins"'],
         'scp': ['"Source Code Pro"']
+      },
+      animation: {
+        'ping-slow': 'ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite',
+        bounce: 'bounce 2s ',
       }
     },
   },
@@ -51,7 +55,8 @@ module.exports = {
   ],
   variants: {
     scrollbar: ['rounded'],
-    extend: {
+    animation: ['responsive', 'motion-safe', 'motion-reduce'],
+    extends: {
       transform: ['hover', 'focus'],
     }
   }

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import About from '../views/About.vue'
 
 Vue.use(VueRouter)
 
@@ -39,6 +40,14 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   linkActiveClass: 'text-yellow-300',
+  scrollBehavior (to, from, savedPosition) {
+    if (to.hash) {
+      return {
+        selector: to.hash,
+        behavior: 'smooth',
+      }
+    }
+  },
   routes
 })
 
