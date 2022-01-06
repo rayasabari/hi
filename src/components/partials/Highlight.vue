@@ -1,7 +1,7 @@
 <template>
-  <span
-    class="px-3 py-1 bg-gray-800 shadow-md mx-1 rounded-full font-light hover:bg-gray-700 duration-300 transition transform hover:-translate-y-1"
+  <div
+    class="px-3 lg:h-10 bg-gray-800 hover:bg-gray-700 text-gray-300 rounded-full shadow-md focus:outline-none inline-flex items-center font-light transition-all transform hover:-translate-y-1 hover:shadow-xl mx-2"
   >
     <slot></slot>
-  </span>
+  </div>
 </template>

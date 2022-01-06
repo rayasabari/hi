@@ -1,9 +1,7 @@
 <template>
   <div id="app">
-    <div
-      class="flex flex-col h-screen scrollbar-thin scrollbar-thumb-yellow-300 scrollbar-track-gray-900 scrollbar-thumb-rounded-full scrollbar-track-rounded-full"
-    >
-      <Content v-if="isLoading == false"></Content>
+    <div class="flex flex-col">
+      <Content v-if="!isLoading" class></Content>
       <Navbar></Navbar>
       <Footer></Footer>
     </div>
@@ -25,7 +23,7 @@ export default {
       isLoading: false,
       customSvg: `
             <svg version="1.1" id="L7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-        viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+        viewBox="0 0 h-screen 100" enable-background="new 0 0 100 100" xml:space="preserve">
       <path fill="#d1d5db" d="M31.6,3.5C5.9,13.6-6.6,42.7,3.5,68.4c10.1,25.7,39.2,38.3,64.9,28.1l-3.1-7.9c-21.3,8.4-45.4-2-53.8-23.3
         c-8.4-21.3,2-45.4,23.3-53.8L31.6,3.5z">
             <animateTransform 
@@ -92,5 +90,26 @@ export default {
 <style>
 html {
   scroll-behavior: smooth !important;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #facc15;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fde047;
 }
 </style>

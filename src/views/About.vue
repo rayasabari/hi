@@ -4,37 +4,37 @@
       <div class="animate__animated animate__fadeInUp flex flex-col items-center">
         <Glitch text="ABOUT"></Glitch>
         <div class="font-light">
-          <router-link to="/" class="text-gray-300">home</router-link>
-          <span class="text-gray-400">&nbsp;/ about</span>
+          <span to="/" class="text-yellow-300">me</span>
+          <span class="text-gray-400"> & personal</span>
         </div>
       </div>
     </div>
     <div
-      class="text-gray-400 w-full h-20 -mt-40 lg:-mt-32 flex justify-center items-center animate__animated animate__fadeInUp"
+      class="text-gray-400 w-full -mt-40 lg:-mt-32 flex justify-center items-center animate__animated animate__fadeInUp"
     >
-        <a href="#detailabout" class="animate-ping-slow text-yellow-300">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-4 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 13l-7 7-7-7m14-8l-7 7-7-7"
-            />
-          </svg>
-        </a>
+      <a href="#detailabout" class="animate-ping-slow text-yellow-300">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-4 w-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 13l-7 7-7-7m14-8l-7 7-7-7"
+          />
+        </svg>
+      </a>
     </div>
     <div
       id="detailabout"
       class="flex items-center justify-center h-screen animate__animated animate__fadeIn"
     >
       <div
-        class="lg:w-6/12 w-72 font-thin text-sm lg:text-xl text-center text-gray-300 leading-10 lg:leading-10"
+        class="w-72 lg:w-4/12 font-thin text-sm lg:text-lg text-center text-gray-300 leading-10 lg:leading-extra-loose"
       >
         I am currently working as a
         <span class="font-light">Senior Full Stack Developer</span> at
@@ -56,11 +56,11 @@
         </Highlight>.
         I am also experienced in using
         <Highlight>
-          <a href="https://wordpress.com/" target="_blank" class="group">
+          <a href="https://wordpress.com/" target="_blank">
             <font-awesome-icon class="mr-2 text-blue-400" :icon="['fab','wordpress']" />Wordpress
           </a>
         </Highlight>and have a good taste in
-        <span class="font-light">UI/UX.</span>
+        <span class="font-light">UI Design.</span>
       </div>
     </div>
   </div>
@@ -73,6 +73,9 @@ export default {
   components: {
     Glitch,
     Highlight,
+  },
+  mounted() {
+    window.scrollTo(0, 0);
   },
 };
 </script>

@@ -33,7 +33,7 @@
     </div>
     <nav
       :class="open == false ? 'hidden' : 'bg-gray-900'"
-      class="lg:flex flex w-full lg:w-auto h-screen absolute lg:static items-center justify-center lg:h-auto flex-col lg:flex-row lg:items-center lg:text-sm text-xl lg:py-4 font-light animate__animated animate__fadeInDown"
+      class="lg:flex flex w-full lg:w-auto h-screen absolute lg:static items-center justify-center lg:h-auto flex-col lg:flex-row lg:items-center lg:text-sm text-xl lg:py-4 font-light animate__animated animate__fadeIn"
     >
       <ul class="flex flex-col lg:flex-row lg:items-center">
         <li v-for="(menu, index) in menus" :key="index" @click="open = false">

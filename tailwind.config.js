@@ -46,7 +46,19 @@ module.exports = {
       },
       animation: {
         'ping-slow': 'ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite',
-        bounce: 'bounce 2s ',
+        'bounce-slow': 'bounce 7s cubic-bezier(0, 0, 0.2, 1) infinite',
+        wiggle: 'wiggle 1s ease-in-out infinite',
+      },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        }
+      },
+      lineHeight: {
+        'extra-loose': '2.5',
+        '12': '3rem',
+        '13': '3.5rem',
       }
     },
   },
