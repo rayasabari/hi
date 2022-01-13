@@ -4,8 +4,8 @@
       <div class="animate__animated animate__fadeInUp flex flex-col items-center">
         <Glitch text="CONTACTS"></Glitch>
         <div class="font-light">
-          <span class="text-yellow-300">get</span>
-          <span class="text-gray-400">&nbsp;in touch</span>
+          <span class="text-yellow-300">reach</span>
+          <span class="text-gray-400">&nbsp;& connect</span>
         </div>
       </div>
     </div>

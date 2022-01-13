@@ -1,10 +1,10 @@
 <template>
   <footer
-    class="px-6 py-4 text-xs flex font-thin flex-col-reverse lg:flex-row lg:justify-between animate__animated animate__fadeIn fixed bottom-0 inset-x-0 bg-gray-900"
+    class="px-6 py-4 text-xs flex font-thin flex-col-reverse lg:flex-row lg:justify-between animate__animated animate__fadeIn fixed bottom-0 inset-x-0 bg-gray-900 lg:bg-transparent"
   >
     <div class="text-gray-500 m-auto lg:m-0 items-center flex font-light">
-      Made with &nbsp;
-      <font-awesome-icon :icon="['fas','heart']" />&nbsp; by Raya Sabari &copy; {{ year }}
+      &copy; {{ year }}. Build with &nbsp;
+      <font-awesome-icon :icon="['fas','heart']" />&nbsp; from Indonesia
     </div>
     <div
       class="text-gray-400 pb-3 lg:pb-0 flex w-40 lg:w-36 text-xl lg:text-base justify-between m-auto lg:m-0"

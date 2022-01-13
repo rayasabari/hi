@@ -5,7 +5,7 @@
         <Glitch text="ABOUT"></Glitch>
         <div class="font-light">
           <span to="/" class="text-yellow-300">me</span>
-          <span class="text-gray-400"> & personal</span>
+          <span class="text-gray-400"> & resume</span>
         </div>
       </div>
     </div>
@@ -34,16 +34,11 @@
       class="flex items-center justify-center h-screen animate__animated animate__fadeIn"
     >
       <div
-        class="w-72 lg:w-4/12 font-thin text-sm lg:text-lg text-center text-gray-300 leading-10 lg:leading-extra-loose"
+        class="w-72 lg:w-6/12 font-light text-lg lg:text-xl text-center text-gray-400 leading-10 lg:leading-extra-loose"
       >
         I am currently working as a
-        <span class="font-light">Senior Full Stack Developer</span> at
-        <a
-          href="https://kjpp.rhr.co.id"
-          target="_blank"
-          class="font-light hover:text-yellow-400"
-        >KJPP RHR.</a>
-        I enjoy building the web apps using
+        <span class="font-normal text-gray-300">Sr. Full Stack Developer</span> at one of big Property Valuation company in Jakarta.
+        I enjoy building and enhance the web apps using
         <Highlight>
           <a href="https://laravel.com/" target="_blank">
             <font-awesome-icon class="mr-2 text-red-500" :icon="['fab','laravel']" />Laravel
@@ -54,13 +49,8 @@
             <font-awesome-icon class="mr-2 text-emerald-500" :icon="['fab','vuejs']" />Vue.js
           </a>
         </Highlight>.
-        I am also experienced in using
-        <Highlight>
-          <a href="https://wordpress.com/" target="_blank">
-            <font-awesome-icon class="mr-2 text-blue-400" :icon="['fab','wordpress']" />Wordpress
-          </a>
-        </Highlight>and have a good taste in
-        <span class="font-light">UI Design.</span>
+        I also have a good taste in
+        <span class="font-normal text-gray-300">UI/UX Design.</span>
       </div>
     </div>
   </div>

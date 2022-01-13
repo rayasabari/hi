@@ -4,8 +4,8 @@
       <div class="animate__animated animate__fadeInUp flex flex-col items-center">
         <Glitch text="PROJECTS"></Glitch>
         <div class="font-light">
-          <span class="text-yellow-300">portfolio</span>
-          <span class="text-gray-400"> & wip</span>
+          <span class="text-yellow-300">works</span>
+          <span class="text-gray-400"> & portfolio</span>
         </div>
       </div>
     </div>
