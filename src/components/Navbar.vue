@@ -5,7 +5,12 @@
     <div
       class="flex items-center justify-between px-6 py-4 lg:w-auto animate__animated animate__fadeIn z-10"
     >
-      <router-link exact active-class="text-gray-300" to="/" class="font-bold italic text-2xl">RYSB</router-link>
+      <router-link
+        exact
+        active-class="text-gray-300"
+        to="/"
+        class="font-medium italic text-2xl"
+      >RYSB</router-link>
       <button @click="open = !open" class="block lg:hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +37,7 @@
       </button>
     </div>
     <nav
-      :class="open == false ? 'hidden' : 'bg-gray-900'"
+      :class="open == false ? 'hidden' : 'bg-gray-900 bg-opacity-95'"
       class="lg:flex flex w-full lg:w-auto h-screen absolute lg:static items-center justify-center lg:h-auto flex-col lg:flex-row lg:items-center lg:text-sm text-xl lg:py-4 font-light animate__animated animate__fadeIn"
     >
       <ul class="flex flex-col lg:flex-row lg:items-center">

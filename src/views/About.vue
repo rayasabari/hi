@@ -34,7 +34,7 @@
       class="flex items-center justify-center h-screen animate__animated animate__fadeIn"
     >
       <div
-        class="w-72 lg:w-6/12 font-light text-lg lg:text-xl text-center text-gray-400 leading-10 lg:leading-extra-loose"
+        class="w-10/12 lg:w-6/12 font-light text-md lg:text-xl text-center text-gray-400 leading-10 lg:leading-extra-loose"
       >
         I am currently working as a
         <span class="font-normal text-gray-300">Sr. Full Stack Developer</span> at one of big Property Valuation company in Jakarta.
