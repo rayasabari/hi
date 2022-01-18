@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import './index.css'
+
 import 'animate.css'
 import VueTyperPlugin from 'vue-typer'
 import { library } from '@fortawesome/fontawesome-svg-core'
