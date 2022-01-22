@@ -1,23 +1,15 @@
 <template>
   <div class="text-gray-300 bg-yellow-30">
-    <div class="flex flex-col items-center justify-center h-screen">
-      <div class="animate__animated animate__fadeInUp flex flex-col items-center">
-        <Glitch text="PROJECTS"></Glitch>
-        <div class="font-light">
-          <span class="text-yellow-300">works</span>
-          <span class="text-gray-400"> & portfolio</span>
-        </div>
-      </div>
-    </div>
+    <SectionTitle :title="'PROJECTS'" :subYellow="'works'" :subGray="'porto'" />
     <div class="h-screen flex items-center justify-center">coming soon...</div>
   </div>
 </template>
 
 <script>
-import Glitch from "@/components/partials/Glitch.vue";
+import SectionTitle from "../components/SectionTitle.vue";
 export default {
   components: {
-    Glitch,
+    SectionTitle,
   },
   mounted() {
     window.scrollTo(0, 0);

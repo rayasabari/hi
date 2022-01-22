@@ -2,7 +2,7 @@
   <footer
     class="px-6 py-4 text-xs flex font-thin flex-col-reverse lg:flex-row lg:justify-between animate__animated animate__fadeIn fixed bottom-0 inset-x-0 bg-gray-900 lg:bg-transparent"
   >
-    <div class="text-gray-500 m-auto lg:m-0 items-center flex font-light">
+    <div class="text-gray-400 m-auto lg:m-0 items-center flex font-light">
       &copy; {{ year }}. Built with &nbsp;
       <font-awesome-icon :icon="['fas','heart']" />&nbsp; from Indonesia
     </div>
