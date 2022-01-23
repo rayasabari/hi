@@ -3,7 +3,9 @@
     class="text-gray-300 backdrop-filter backdrop-blur-sm w-full flex flex-col lg:flex-row justify-between fixed top-0 inset-x-0"
   >
     <div
-      class="flex items-center justify-between px-6 py-4 lg:w-auto animate__animated animate__fadeIn z-10"
+      data-aos="fade"
+      data-aos-duration="1000"
+      class="flex items-center justify-between px-6 py-4 lg:w-auto z-10"
     >
       <router-link
         exact
@@ -37,15 +39,15 @@
       </button>
     </div>
     <nav
-      :class="open == false ? 'hidden' : 'bg-gray-900 bg-opacity-95'"
-      class="lg:flex flex w-full lg:w-auto h-screen absolute lg:static items-center justify-center lg:h-auto flex-col lg:flex-row lg:items-center lg:text-sm text-xl lg:py-4 font-light animate__animated animate__fadeIn"
+      :class="open == false ? 'hidden' : 'bg-gray-900'"
+      class="lg:flex flex animate__animated animate__fadeIn w-full lg:w-auto h-screen absolute lg:static items-center justify-center lg:h-auto flex-col lg:flex-row lg:items-center lg:text-sm text-xl lg:py-4 font-light"
     >
       <ul class="flex flex-col lg:flex-row lg:items-center">
         <li v-for="(menu, index) in menus" :key="index" @click="open = false">
           <router-link
             :exact="menu.link == '/' ? true : false"
             :to="menu.link"
-            class="block px-6 py-5 lg:py-2 text-2xl lg:text-sm font-normal lg:font-light  text-gray-400 hover:text-gray-300 text-center"
+            class="block px-6 py-5 lg:py-2 text-2xl lg:text-sm font-normal lg:font-light text-gray-400 hover:text-gray-300 text-center"
           >{{menu.name}}</router-link>
         </li>
       </ul>

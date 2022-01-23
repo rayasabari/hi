@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "twc": "npx tailwindcss -i ./src/index.css -o ./public/css/style.css --watch"
+    "watch": "npx tailwindcss -i ./src/index.css -o ./public/css/style.css --watch",
+    "prod": "npx tailwindcss -o ./public/css/style.css --minify"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",

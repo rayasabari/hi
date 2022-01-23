@@ -6,7 +6,7 @@
       <div
         class="w-10/12 lg:w-6/12 text-center mb-3 lg:mb-5 font-light text-md lg:text-xl text-gray-400 leading-10 lg:leading-extra-loose"
       >
-        <div data-aos="fade" data-aos-duration="1000">
+        <div data-aos="fade" data-aos-duration="1000" data-aos-delay="200">
           I have a lot of experiences in the real projects in web development using
           <Highlight>
             <a href="https://php.net/" target="_blank" class="text-gray-300">
@@ -33,7 +33,7 @@
           <img
             data-aos="fade-up"
             data-aos-duration="500"
-            :data-aos-delay="index * 200"
+            :data-aos-delay="400 + (index * 200)"
             :src="`./images/${tech.icon}`"
             :alt="tech.alt"
             :class="tech.icon == 'bootstrap.svg' ? 'w-auto' :'w-10 lg:w-12'"
