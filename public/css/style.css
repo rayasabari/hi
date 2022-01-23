@@ -481,24 +481,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: 0px;
 }
 
-.top-0 {
-  top: 0px;
-}
-
 .bottom-0 {
   bottom: 0px;
+}
+
+.top-0 {
+  top: 0px;
 }
 
 .z-10 {
   z-index: 10;
 }
 
-.m-7 {
-  margin: 1.75rem;
-}
-
 .m-auto {
   margin: auto;
+}
+
+.m-7 {
+  margin: 1.75rem;
 }
 
 .mx-2 {
@@ -566,6 +566,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   min-height: calc(var(--vh) * 100);
 }
 
+.w-40 {
+  width: 10rem;
+}
+
 .w-full {
   width: 100%;
 }
@@ -588,10 +592,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-10 {
   width: 2.5rem;
-}
-
-.w-40 {
-  width: 10rem;
 }
 
 .transform {
@@ -695,9 +695,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-family: "Poppins";
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .text-xl {
@@ -705,9 +705,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.75rem;
 }
 
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-base {
@@ -715,17 +715,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.5rem;
 }
 
+.text-3xs {
+  font-size: 0.5rem;
+  line-height: 0.75rem;
+}
+
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
 }
 
-.font-medium {
-  font-weight: 500;
+.font-thin {
+  font-weight: 100;
 }
 
 .font-light {
   font-weight: 300;
+}
+
+.font-medium {
+  font-weight: 500;
 }
 
 .font-normal {
@@ -734,10 +743,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .font-extralight {
   font-weight: 200;
-}
-
-.font-thin {
-  font-weight: 100;
 }
 
 .font-bold {
@@ -756,14 +761,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   letter-spacing: 0.025em;
 }
 
-.text-gray-300 {
-  --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity));
-}
-
 .text-gray-400 {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
 .text-yellow-300 {
@@ -830,12 +835,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-duration: 150ms;
 }
 
-.duration-200 {
-  transition-duration: 200ms;
-}
-
 .duration-300 {
   transition-duration: 300ms;
+}
+
+.duration-200 {
+  transition-duration: 200ms;
 }
 
 .hover\:-translate-y-1:hover {
@@ -854,14 +859,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
 }
 
-.hover\:text-gray-300:hover {
-  --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity));
-}
-
 .hover\:text-yellow-300:hover {
   --tw-text-opacity: 1;
   color: rgb(253 224 71 / var(--tw-text-opacity));
+}
+
+.hover\:text-gray-300:hover {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
 .hover\:opacity-100:hover {
@@ -930,6 +935,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: 2.5rem;
   }
 
+  .lg\:w-36 {
+    width: 9rem;
+  }
+
   .lg\:w-auto {
     width: auto;
   }
@@ -944,10 +953,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:w-12 {
     width: 3rem;
-  }
-
-  .lg\:w-36 {
-    width: 9rem;
   }
 
   .lg\:flex-row {
@@ -980,6 +985,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-bottom: 0px;
   }
 
+  .lg\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
   .lg\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -990,9 +1000,9 @@ Ensure the default browser behavior of the `hidden` attribute.
     line-height: 1.75rem;
   }
 
-  .lg\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
+  .lg\:text-2xs {
+    font-size: 0.65rem;
+    line-height: 0.85rem;
   }
 
   .lg\:text-7xl {
