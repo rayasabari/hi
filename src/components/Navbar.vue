@@ -45,7 +45,7 @@
           <router-link
             :exact="menu.link == '/' ? true : false"
             :to="menu.link"
-            class="block px-6 py-4 lg:py-2 text-gray-400 hover:text-gray-300 text-center"
+            class="block px-6 py-5 lg:py-2 text-2xl lg:text-sm font-normal lg:font-light  text-gray-400 hover:text-gray-300 text-center"
           >{{menu.name}}</router-link>
         </li>
       </ul>

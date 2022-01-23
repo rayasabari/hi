@@ -510,8 +510,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 0.5rem;
 }
 
-.mt-24 {
-  margin-top: 6rem;
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
 }
 
 .-mb-1 {
@@ -550,8 +554,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 1.25rem;
 }
 
-.h-16 {
-  height: 4rem;
+.h-10 {
+  height: 2.5rem;
 }
 
 .h-4 {
@@ -578,16 +582,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 1.25rem;
 }
 
-.w-11\/12 {
-  width: 91.666667%;
-}
-
 .w-auto {
   width: auto;
 }
 
-.w-16 {
-  width: 4rem;
+.w-10 {
+  width: 2.5rem;
 }
 
 .w-40 {
@@ -629,8 +629,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   flex-direction: column-reverse;
 }
 
-.flex-wrap-reverse {
-  flex-wrap: wrap-reverse;
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-center {
@@ -643,10 +643,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .justify-between {
   justify-content: space-between;
-}
-
-.scroll-smooth {
-  scroll-behavior: smooth;
 }
 
 .rounded-full {
@@ -675,6 +671,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .px-3 {
@@ -780,8 +781,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(250 204 21 / var(--tw-text-opacity));
 }
 
-.opacity-70 {
-  opacity: 0.7;
+.opacity-90 {
+  opacity: 0.9;
 }
 
 .shadow-md {
@@ -790,8 +791,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.grayscale {
-  --tw-grayscale: grayscale(100%);
+.contrast-100 {
+  --tw-contrast: contrast(1);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.saturate-0 {
+  --tw-saturate: saturate(0);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
@@ -822,6 +828,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+.duration-200 {
+  transition-duration: 200ms;
 }
 
 .duration-300 {
@@ -864,8 +874,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.hover\:grayscale-0:hover {
-  --tw-grayscale: grayscale(0);
+.hover\:contrast-200:hover {
+  --tw-contrast: contrast(2);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.hover\:saturate-100:hover {
+  --tw-saturate: saturate(1);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
@@ -883,8 +898,12 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin: 0px;
   }
 
-  .lg\:mb-7 {
-    margin-bottom: 1.75rem;
+  .lg\:mb-5 {
+    margin-bottom: 1.25rem;
+  }
+
+  .lg\:mt-20 {
+    margin-top: 5rem;
   }
 
   .lg\:-mt-32 {
@@ -903,6 +922,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: auto;
   }
 
+  .lg\:h-12 {
+    height: 3rem;
+  }
+
   .lg\:h-10 {
     height: 2.5rem;
   }
@@ -913,6 +936,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:w-6\/12 {
     width: 50%;
+  }
+
+  .lg\:w-5\/12 {
+    width: 41.666667%;
+  }
+
+  .lg\:w-12 {
+    width: 3rem;
   }
 
   .lg\:w-36 {
@@ -967,6 +998,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:text-7xl {
     font-size: 4.5rem;
     line-height: 1;
+  }
+
+  .lg\:font-light {
+    font-weight: 300;
   }
 
   .lg\:leading-extra-loose {
