@@ -1,6 +1,6 @@
 <template>
   <div class="text-gray-300 h-screen flex items-center justify-center">
-    <div class="h-90 flex flex-col items-center justify-center animate__animated animate__fadeInUp">
+    <div data-aos="fade-up" data-aos-duration="1000" class="h-90 flex flex-col items-center justify-center">
       <Glitch :text="nama"></Glitch>
       <Typer class="text-base" :text="tagline"></Typer>
     </div>
