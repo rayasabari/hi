@@ -4,6 +4,9 @@ import App from './App.vue'
 import 'animate.css'
 import VueTyperPlugin from 'vue-typer'
 
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook, faTwitter, faGithub, faLinkedin, faInstagram, faPhp, faJs } from '@fortawesome/free-brands-svg-icons'
@@ -18,5 +21,8 @@ Vue.config.productionTip = false
 
 new Vue({
   router,
-  render: h => h(App)
+  render: h => h(App),
+  mounted() {
+    AOS.init()
+  },
 }).$mount('#app')

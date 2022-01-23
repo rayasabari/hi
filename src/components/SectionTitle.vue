@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col items-center justify-center h-screen">
-    <div class="animate__animated animate__fadeInUp flex flex-col items-center">
+    <div data-aos="fade-up" data-aos-duration="1000" class=" flex flex-col items-center">
       <Glitch :text="title"></Glitch>
       <div class="font-base">
         <span class="text-yellow-300">{{subYellow}}</span>
