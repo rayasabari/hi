@@ -1,7 +1,6 @@
 <template>
   <div class="text-gray-300 bg-yellow-30">
-    <SectionTitle :title="'CONTACTS'" :subYellow="'reach'" :subGray="' & connect'" />
-    <div class="h-screen flex items-center justify-center">coming soon...</div>
+    <section-title :title="'404'" :subYellow="'page'" :subGray="' not found'" />
   </div>
 </template>
 

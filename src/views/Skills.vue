@@ -1,6 +1,6 @@
 <template>
   <div class="text-gray-300 bg-yellow-30">
-    <SectionTitle :title="'SKILLS'" :subYellow="'techs'" :subGray="'tools'" />
+    <SectionTitle :title="'SKILLS'" :subYellow="'techs'" :subGray="' & tools'" />
     <Scroller :to="'#dataskills'" />
     <div id="dataskills" class="h-screen flex flex-col items-center justify-center">
       <div
@@ -26,23 +26,23 @@
           :key="index"
           :href="tech.link"
           target="_blank"
-          @mouseover="texhName = tech.alt"
-          @mouseleave="texhName = ''"
-          class="m-7 flex flex-col saturate-0 hover:saturate-100 opacity-90 hover:opacity-100 contrast-100 hover:contrast-200 items-center justify-center filter hover:scale-125 transition duration-200"
+          @mouseover="techName = tech.name"
+          @mouseleave="techName = ''"
+          class="m-7 flex flex-col saturate-0 brightness-200 hover:brightness-100 hover:saturate-100 opacity-80 hover:opacity-100 contrast-100 hover:contrast-200 items-center justify-center filter hover:scale-125 transition duration-300"
         >
           <img
             data-aos="fade-up"
             data-aos-duration="500"
-            :data-aos-delay="400 + (index * 200)"
+            :data-aos-delay="600 + (index * 200)"
             :src="`./images/${tech.icon}`"
-            :alt="tech.alt"
+            :alt="tech.name"
             :class="tech.icon == 'bootstrap.svg' ? 'w-auto' :'w-10 lg:w-12'"
             class="h-10 lg:h-12"
           />
           <div
-            v-if="texhName == tech.alt"
+            v-if="techName == tech.name"
             class="text-3xs lg:text-2xs text-center text-gray-300 font-extralight mt-16 lg:mt-20 absolute transition duration-300"
-          >{{texhName}}</div>
+          >{{techName}}</div>
         </a>
       </div>
     </div>
@@ -61,52 +61,52 @@ export default {
   },
   data() {
     return {
-      texhName: "",
+      techName: "",
       techs: [
         {
           icon: "laravel.svg",
           link: "https://laravel.com",
-          alt: "Laravel",
+          name: "Laravel",
         },
         {
           icon: "tailwind.svg",
           link: "https://tailwindcss.com",
-          alt: "Tailwind",
+          name: "Tailwind",
         },
         {
           icon: "vue.svg",
           link: "https://vuejs.org",
-          alt: "Vue JS",
+          name: "Vue JS",
         },
         {
           icon: "nuxt.svg",
           link: "https://nuxtjs.org",
-          alt: "Nuxt JS",
+          name: "Nuxt JS",
         },
         {
           icon: "wordpress.svg",
           link: "https://wordpress.com",
-          alt: "Wordpress",
+          name: "Wordpress",
         },
         {
           icon: "codeigniter.svg",
           link: "https://codeigniter.com",
-          alt: "Codeigniter",
+          name: "Codeigniter",
         },
         {
           icon: "bootstrap.svg",
           link: "https://getbootstrap.com",
-          alt: "Bootstrap",
+          name: "Bootstrap",
         },
         {
           icon: "react.svg",
           link: "https://reactjs.org/",
-          alt: "React JS",
+          name: "React JS",
         },
         {
           icon: "next.webp",
           link: "https://nextjs.org/",
-          alt: "Next JS",
+          name: "Next JS",
         },
       ],
     };

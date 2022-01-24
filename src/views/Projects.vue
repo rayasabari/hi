@@ -1,6 +1,6 @@
 <template>
   <div class="text-gray-300 bg-yellow-30">
-    <SectionTitle :title="'PROJECTS'" :subYellow="'works'" :subGray="'porto'" />
+    <SectionTitle :title="'PROJECTS'" :subYellow="'works'" :subGray="' & porto'" />
     <div class="h-screen flex items-center justify-center">coming soon...</div>
   </div>
 </template>

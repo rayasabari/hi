@@ -1,10 +1,10 @@
 <template>
   <div class="text-gray-300">
-    <SectionTitle :title="'ABOUT'" :subYellow="'intro'" :subGray="'exp.'" />
+    <SectionTitle :title="'ABOUT'" :subYellow="'intro'" :subGray="' & exp.'" />
     <Scroller :to="'#detailabout'" />
     <div
       id="detailabout"
-      data-aos="fade-up" data-aos-duration="1000"
+      data-aos="fade" data-aos-duration="1000" data-aos-delay="200"
       class="flex items-center justify-center h-screen"
     >
       <div
