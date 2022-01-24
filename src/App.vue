@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="flex flex-col" v-if="!isLoading">
-      <Content class></Content>
+      <Content></Content>
       <Navbar></Navbar>
       <Footer></Footer>
     </div>
@@ -88,9 +88,6 @@ export default {
 };
 </script>
 <style>
-/* html {
-  scroll-behavior: smooth !important;
-} */
 /* width */
 ::-webkit-scrollbar {
   width: 5px;
