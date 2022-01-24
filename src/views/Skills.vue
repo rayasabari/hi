@@ -1,5 +1,5 @@
 <template>
-  <div class="text-gray-300 bg-yellow-30">
+  <div class="text-gray-300">
     <SectionTitle :title="'SKILLS'" :subYellow="'techs'" :subGray="' & tools'" />
     <Scroller :to="'#dataskills'" />
     <div id="dataskills" class="h-screen flex flex-col items-center justify-center">
@@ -28,7 +28,7 @@
           target="_blank"
           @mouseover="techName = tech.name"
           @mouseleave="techName = ''"
-          class="m-7 flex flex-col saturate-0 brightness-200 hover:brightness-100 hover:saturate-100 opacity-80 hover:opacity-100 contrast-100 hover:contrast-200 items-center justify-center filter hover:scale-125 transition duration-300"
+          class="m-7 flex flex-col saturate-0 brightness-200 hover:brightness-100 hover:saturate-100 opacity-50 hover:opacity-100 contrast-100 hover:contrast-200 items-center justify-center filter hover:scale-125 transition duration-300"
         >
           <img
             data-aos="fade-up"
