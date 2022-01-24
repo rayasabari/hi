@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import About from '../views/About.vue'
 
 Vue.use(VueRouter)
 
@@ -33,21 +32,18 @@ const routes = [
     path: '/contacts',
     name: 'Contacs',
     component: () => import(/* webpackChunkName: "about" */ '../views/Contacts.vue')
-  }
+  },
+  {
+    path: '*',
+    name: 'NotFound',
+    component: () => import(/* webpackChunkName: "about" */ '../views/NotFound.vue')
+  },
 ]
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   linkActiveClass: 'text-yellow-300',
-  scrollBehavior (to, from, savedPosition) {
-    if (to.hash) {
-      return {
-        selector: to.hash,
-        behavior: 'smooth',
-      }
-    }
-  },
   routes
 })
 
