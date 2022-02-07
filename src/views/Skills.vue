@@ -2,9 +2,9 @@
   <div class="text-gray-300">
     <SectionTitle :title="'SKILLS'" :subYellow="'techs'" :subGray="' & tools'" />
     <Scroller :to="'#dataskills'" />
-    <div id="dataskills" class="h-screen flex flex-col items-center justify-center">
+    <div id="dataskills" class="flex flex-col items-center justify-center h-screen">
       <div
-        class="w-10/12 lg:w-6/12 text-center mb-3 lg:mb-5 font-light text-md lg:text-xl text-gray-400 leading-10 lg:leading-extra-loose"
+        class="w-10/12 mb-3 font-light leading-10 text-center text-gray-400 lg:w-5/12 lg:mb-5 text-md lg:text-xl lg:leading-extra-loose"
       >
         <div data-aos="fade" data-aos-duration="1000" data-aos-delay="200">
           I have a lot of experiences in the real projects in web development using
@@ -20,7 +20,7 @@
           </Highlight>. I am pretty confident in building apps using these techs and tools:
         </div>
       </div>
-      <div class="w-10/12 lg:w-5/12 flex flex-wrap items-center justify-center">
+      <div class="flex flex-wrap items-center justify-center w-10/12 lg:w-4/12">
         <a
           v-for="(tech,index) in techs"
           :key="index"
@@ -28,7 +28,7 @@
           target="_blank"
           @mouseover="techName = tech.name"
           @mouseleave="techName = ''"
-          class="m-7 flex flex-col saturate-0 brightness-200 hover:brightness-100 hover:saturate-100 opacity-50 hover:opacity-100 contrast-100 hover:contrast-200 items-center justify-center filter hover:scale-125 transition duration-300"
+          class="flex flex-col items-center justify-center transition duration-300 opacity-50 m-7 saturate-0 brightness-200 hover:brightness-100 hover:saturate-100 hover:opacity-100 contrast-100 hover:contrast-200 filter hover:scale-125"
         >
           <img
             data-aos="fade-up"
@@ -41,7 +41,7 @@
           />
           <div
             v-if="techName == tech.name"
-            class="text-3xs lg:text-2xs text-center text-gray-300 font-extralight mt-16 lg:mt-20 absolute transition duration-300"
+            class="absolute mt-16 text-center text-gray-300 transition duration-300 text-3xs lg:text-2xs font-extralight lg:mt-20"
           >{{techName}}</div>
         </a>
       </div>
