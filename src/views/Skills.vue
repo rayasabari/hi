@@ -1,8 +1,8 @@
 <template>
   <div class="text-gray-300">
     <SectionTitle :title="'SKILLS'" :subYellow="'techs'" :subGray="' & tools'" />
-    <Scroller :to="'#dataskills'" />
-    <div id="dataskills" class="flex flex-col items-center justify-center h-screen">
+    <Scroller :to="'#detail-skills'" />
+    <div id="detail-skills" class="flex flex-col items-center justify-center h-screen">
       <div
         class="w-10/12 mb-3 font-light leading-10 text-center text-gray-400 lg:w-5/12 lg:mb-5 text-md lg:text-xl lg:leading-extra-loose"
       >
