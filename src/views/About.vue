@@ -24,6 +24,7 @@
         </Highlight>.
         I also have a good taste in
         <span class="font-normal text-gray-300">UI/UX.</span>
+        <NavGuide :to="'/skills'" :position="''">my skills</NavGuide>
       </div>
     </div>
   </div>
@@ -31,6 +32,7 @@
 
 <script>
 import Highlight from "../components/partials/Highlight.vue";
+import NavGuide from "../components/partials/NavGuide.vue";
 import Scroller from "../components/partials/Scroller.vue";
 import SectionTitle from "../components/SectionTitle.vue";
 export default {
@@ -38,6 +40,7 @@ export default {
     Highlight,
     SectionTitle,
     Scroller,
+    NavGuide,
   },
   mounted() {
     window.scrollTo(0, 0);
