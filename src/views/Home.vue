@@ -1,20 +1,27 @@
 <template>
-  <div class="text-gray-300 h-screen flex items-center justify-center">
-    <div data-aos="fade-up" data-aos-duration="1000" class="h-90 flex flex-col items-center justify-center">
+  <div class="flex items-center justify-center h-screen text-gray-300">
+    <div
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      class="flex flex-col items-center justify-center h-90"
+    >
       <Glitch :text="nama"></Glitch>
       <Typer class="text-base" :text="tagline"></Typer>
     </div>
+    <NavGuide :to="'/about'" position="absolute">know more</NavGuide>
   </div>
 </template>
 
 <script>
 import Glitch from "@/components/partials/Glitch.vue";
 import Typer from "@/components/partials/Typer.vue";
+import NavGuide from "../components/partials/NavGuide.vue";
 export default {
   name: "Home",
   components: {
     Glitch,
     Typer,
+    NavGuide,
   },
   data() {
     return {

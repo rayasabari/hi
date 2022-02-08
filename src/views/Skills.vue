@@ -1,13 +1,13 @@
 <template>
   <div class="text-gray-300">
     <SectionTitle :title="'SKILLS'" :subYellow="'techs'" :subGray="' & tools'" />
-    <Scroller :to="'#dataskills'" />
-    <div id="dataskills" class="flex flex-col items-center justify-center h-screen">
+    <Scroller :to="'#detail-skills'" />
+    <div id="detail-skills" class="flex flex-col items-center justify-center h-screen">
       <div
         class="w-10/12 mb-3 font-light leading-10 text-center text-gray-400 lg:w-5/12 lg:mb-5 text-md lg:text-xl lg:leading-extra-loose"
       >
         <div data-aos="fade" data-aos-duration="1000" data-aos-delay="200">
-          I have a lot of experiences in the real projects in web development using
+          I have 4+ years experiences in web development using
           <Highlight>
             <a href="https://php.net/" target="_blank" class="text-gray-300">
               <font-awesome-icon class="mr-2 text-indigo-400" :icon="['fab','php']" />PHP
@@ -17,7 +17,7 @@
             <a href="https://javascript.com/" target="_blank">
               <font-awesome-icon class="mr-2 text-yellow-400" :icon="['fab','js']" />Javascript
             </a>
-          </Highlight>. I am pretty confident in building apps using these techs and tools:
+          </Highlight>. I am pretty confident in building apps using these techs:
         </div>
       </div>
       <div class="flex flex-wrap items-center justify-center w-10/12 lg:w-4/12">
@@ -45,6 +45,7 @@
           >{{techName}}</div>
         </a>
       </div>
+      <NavGuide :to="'/projects'" :position="''" delay="3000">projects</NavGuide>
     </div>
   </div>
 </template>
@@ -53,11 +54,13 @@
 import SectionTitle from "../components/SectionTitle.vue";
 import Highlight from "../components/partials/Highlight.vue";
 import Scroller from "../components/partials/Scroller.vue";
+import NavGuide from "../components/partials/NavGuide.vue";
 export default {
   components: {
     SectionTitle,
     Highlight,
     Scroller,
+    NavGuide,
   },
   data() {
     return {
