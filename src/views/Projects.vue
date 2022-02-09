@@ -39,7 +39,7 @@ export default {
     return {
       projects: [
         {
-          name: "propertiforsale.id",
+          name: "propertyforsale.id",
           title: "Landing Page",
           tag: "Web Development",
           year: "2022",
