@@ -16,7 +16,7 @@
           </a>
         </Highlight>. I am pretty confident in building apps using these techs:
       </Section>
-      <div class="flex flex-wrap items-center justify-center w-10/12 lg:w-4/12">
+      <div class="flex flex-wrap items-center justify-center w-10/12 mt-2 lg:-mt-1 lg:w-4/12">
         <a
           v-for="(tech,index) in techs"
           :key="index"
@@ -32,8 +32,8 @@
             :data-aos-delay="600 + (index * 200)"
             :src="`./images/${tech.icon}`"
             :alt="tech.name"
-            :class="tech.icon == 'bootstrap.svg' ? 'w-auto' :'w-10 lg:w-12'"
-            class="h-10 lg:h-12"
+            :class="tech.icon == 'bootstrap.svg' ? 'w-auto' :'w-8 lg:w-12'"
+            class="h-8 lg:h-12"
           />
           <div
             v-if="techName == tech.name"

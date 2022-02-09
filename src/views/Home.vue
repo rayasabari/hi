@@ -8,7 +8,7 @@
       <Glitch :text="title"></Glitch>
       <Typer class="text-base" :text="tagline"></Typer>
     </div>
-    <NavGuide :to="'/about'" position="absolute">know more</NavGuide>
+    <NavGuide :to="'/about'" position="absolute">discover</NavGuide>
   </div>
 </template>
 
