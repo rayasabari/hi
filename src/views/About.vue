@@ -1,6 +1,6 @@
 <template>
   <div class="text-gray-300">
-    <SectionTitle :title="'ABOUT'" :subYellow="'bio'" :subGray="' & exp.'" />
+    <SectionTitle :title="'ABOUT'" :subYellow="'bio'" :subGray="' & resume'" />
     <Scroller :to="'#detail-about'" />
     <div id="detail-about" class="flex items-center justify-center h-screen">
       <Section data-aos="fade" data-aos-duration="1000" data-aos-delay="200">

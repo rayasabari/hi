@@ -1,12 +1,21 @@
 <template>
   <div class="text-gray-300">
-    <!-- <SectionTitle :title="'PROJECTS'" :subYellow="'works'" :subGray="' & porto'" />
-    <Scroller :to="'#detail-projects'" />-->
-    <div id="detail-projects" class="flex items-center justify-center min-h-screen">
-      <Section data-aos="fade" data-aos-duration="1000" data-aos-delay="200">
-        <div class="flex flex-col lg:flex-row lg:flex-wrap">
-          <div v-for="(project, index) in projects" :key="index">
-            <CardProject :img="`./images/projects/${project.img}`" :project="project"></CardProject>
+    <SectionTitle :title="'PROJECTS'" :subYellow="'works'" :subGray="' & porto'" />
+    <Scroller :to="'#detail-projects'" />
+    <div
+      id="detail-projects"
+      class="flex items-center justify-center min-h-screen pt-16 mb-40 lg:pt-0 lg:mb-0"
+    >
+      <Section>
+        <div class="flex flex-col space-y-4 lg:space-y-0 lg:flex-row lg:flex-wrap">
+          <div v-for="(project, index) in projects" :key="index" class="lg:w-6/12">
+            <CardProject
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              :data-aos-delay="600 + (index * 200)"
+              :img="`./images/projects/${project.img}`"
+              :project="project"
+            ></CardProject>
           </div>
         </div>
       </Section>
@@ -30,7 +39,7 @@ export default {
     return {
       projects: [
         {
-          name: "Propertiforsale.id",
+          name: "propertiforsale.id",
           title: "Landing Page",
           tag: "Web Development",
           year: "2022",
@@ -91,6 +100,26 @@ export default {
               icon: "vue.svg",
               link: "https://vuejs.org",
               name: "Vue JS",
+            },
+            {
+              icon: "bootstrap.svg",
+              link: "https://getbootstrap.com",
+              name: "Bootstrap",
+            },
+          ],
+        },
+        {
+          name: "rantaka.id",
+          title: "Property Management",
+          tag: "Web Development",
+          year: "2019",
+          role: "Full Stack",
+          img: "rantaka.id.webp",
+          techs: [
+            {
+              icon: "laravel.svg",
+              link: "https://laravel.com",
+              name: "Laravel",
             },
             {
               icon: "bootstrap.svg",
