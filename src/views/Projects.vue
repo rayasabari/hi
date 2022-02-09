@@ -1,18 +1,106 @@
 <template>
   <div class="text-gray-300">
-    <SectionTitle :title="'PROJECTS'" :subYellow="'works'" :subGray="' & porto'" />
-    <Scroller :to="'#detail-projects'" />
-    <div id="detail-projects" class="flex items-center justify-center h-screen">coming soon...</div>
+    <!-- <SectionTitle :title="'PROJECTS'" :subYellow="'works'" :subGray="' & porto'" />
+    <Scroller :to="'#detail-projects'" />-->
+    <div id="detail-projects" class="flex items-center justify-center min-h-screen">
+      <Section data-aos="fade" data-aos-duration="1000" data-aos-delay="200">
+        <div class="flex flex-col lg:flex-row lg:flex-wrap">
+          <div v-for="(project, index) in projects" :key="index">
+            <CardProject :img="`./images/projects/${project.img}`" :project="project"></CardProject>
+          </div>
+        </div>
+      </Section>
+    </div>
   </div>
 </template>
 
 <script>
-import Scroller from '../components/partials/Scroller.vue';
+import CardProject from "../components/CardProject.vue";
+import Scroller from "../components/partials/Scroller.vue";
+import Section from "../components/Section.vue";
 import SectionTitle from "../components/SectionTitle.vue";
 export default {
   components: {
     SectionTitle,
     Scroller,
+    Section,
+    CardProject,
+  },
+  data() {
+    return {
+      projects: [
+        {
+          name: "Propertiforsale.id",
+          title: "Landing Page",
+          tag: "Web Development",
+          year: "2022",
+          role: "Front End",
+          img: "propertyforsale.id.webp",
+          techs: [
+            {
+              icon: "nuxt.svg",
+              link: "https://nuxtjs.org",
+              name: "Nuxt JS",
+            },
+            {
+              icon: "tailwind.svg",
+              link: "https://tailwindcss.com",
+              name: "Tailwind",
+            },
+          ],
+        },
+        {
+          name: "RHR-PLN 2021",
+          title: "Appraisal System",
+          tag: "Web Development",
+          year: "2021",
+          role: "Full Stack",
+          img: "rhrpln2021.webp",
+          techs: [
+            {
+              icon: "laravel.svg",
+              link: "https://laravel.com",
+              name: "Laravel",
+            },
+            {
+              icon: "vue.svg",
+              link: "https://vuejs.org",
+              name: "Vue JS",
+            },
+            {
+              icon: "bootstrap.svg",
+              link: "https://getbootstrap.com",
+              name: "Bootstrap",
+            },
+          ],
+        },
+        {
+          name: "RHR Integrated System",
+          title: "SAP",
+          tag: "Web Development",
+          year: "2020",
+          role: "Full Stack",
+          img: "ris2.webp",
+          techs: [
+            {
+              icon: "laravel.svg",
+              link: "https://laravel.com",
+              name: "Laravel",
+            },
+            {
+              icon: "vue.svg",
+              link: "https://vuejs.org",
+              name: "Vue JS",
+            },
+            {
+              icon: "bootstrap.svg",
+              link: "https://getbootstrap.com",
+              name: "Bootstrap",
+            },
+          ],
+        },
+      ],
+    };
   },
   mounted() {
     window.scrollTo(0, 0);

@@ -5,7 +5,7 @@
       data-aos-duration="1000"
       class="flex flex-col items-center justify-center h-90"
     >
-      <Glitch :text="nama"></Glitch>
+      <Glitch :text="title"></Glitch>
       <Typer class="text-base" :text="tagline"></Typer>
     </div>
     <NavGuide :to="'/about'" position="absolute">know more</NavGuide>
@@ -25,7 +25,7 @@ export default {
   },
   data() {
     return {
-      nama: "HI",
+      title: "HI",
       tagline: [
         "I am Raya Sabari",
         "A Full Stack Developer",
