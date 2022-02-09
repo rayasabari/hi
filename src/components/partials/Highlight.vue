@@ -1,6 +1,6 @@
 <template>
   <div
-    class="px-3 lg:h-10 text-md lg:text-xl bg-gray-800 hover:bg-gray-700 text-gray-300 rounded-full shadow-md focus:outline-none inline-flex items-center font-light transition-all transform hover:-translate-y-1 hover:shadow-xl mx-2"
+    class="inline-flex items-center px-3 mx-2 font-light text-gray-300 transition-all transform bg-gray-800 rounded-full shadow-md lg:h-10 text-md lg:text-xl hover:bg-gray-700 focus:outline-none hover:-translate-y-1 hover:shadow-xl"
   >
     <slot></slot>
   </div>

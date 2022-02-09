@@ -17,6 +17,9 @@ module.exports = {
       screen: 'calc(var(--vh) * 100)',
     }),
     extend: {
+      letterSpacing: {
+        'ultra-wide': '0.15em'
+      },
       fontSize: {
         '3xs': ['0.5rem', { lineHeight: '0.75rem' }],
         '2xs': ['0.65rem', { lineHeight: '0.85rem' }],

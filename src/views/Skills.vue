@@ -3,23 +3,19 @@
     <SectionTitle :title="'SKILLS'" :subYellow="'techs'" :subGray="' & tools'" />
     <Scroller :to="'#detail-skills'" />
     <div id="detail-skills" class="flex flex-col items-center justify-center h-screen">
-      <div
-        class="w-10/12 mb-3 font-light leading-10 text-center text-gray-400 lg:w-5/12 lg:mb-5 text-md lg:text-xl lg:leading-extra-loose"
-      >
-        <div data-aos="fade" data-aos-duration="1000" data-aos-delay="200">
-          I have 4+ years experiences in web development using
-          <Highlight>
-            <a href="https://php.net/" target="_blank" class="text-gray-300">
-              <font-awesome-icon class="mr-2 text-indigo-400" :icon="['fab','php']" />PHP
-            </a>
-          </Highlight>and
-          <Highlight>
-            <a href="https://javascript.com/" target="_blank">
-              <font-awesome-icon class="mr-2 text-yellow-400" :icon="['fab','js']" />Javascript
-            </a>
-          </Highlight>. I am pretty confident in building apps using these techs:
-        </div>
-      </div>
+      <Section data-aos="fade" data-aos-duration="1000" data-aos-delay="200">
+        I have 4+ years experiences in web development using
+        <Highlight>
+          <a href="https://php.net/" target="_blank" class="text-gray-300">
+            <font-awesome-icon class="mr-2 text-indigo-400" :icon="['fab','php']" />PHP
+          </a>
+        </Highlight>and
+        <Highlight>
+          <a href="https://javascript.com/" target="_blank">
+            <font-awesome-icon class="mr-2 text-yellow-400" :icon="['fab','js']" />Javascript
+          </a>
+        </Highlight>. I am pretty confident in building apps using these techs:
+      </Section>
       <div class="flex flex-wrap items-center justify-center w-10/12 lg:w-4/12">
         <a
           v-for="(tech,index) in techs"
@@ -28,7 +24,7 @@
           target="_blank"
           @mouseover="techName = tech.name"
           @mouseleave="techName = ''"
-          class="flex flex-col items-center justify-center transition duration-300 opacity-50 m-7 saturate-0 brightness-200 hover:brightness-100 hover:saturate-100 hover:opacity-100 contrast-100 hover:contrast-200 filter hover:scale-125"
+          class="flex flex-col items-center justify-center transition duration-300 opacity-50 m-7 saturate-0 brightness-200 hover:brightness-100 hover:saturate-100 hover:opacity-100 contrast-100 hover:contrast-150 filter hover:scale-125"
         >
           <img
             data-aos="fade-up"
@@ -55,12 +51,14 @@ import SectionTitle from "../components/SectionTitle.vue";
 import Highlight from "../components/partials/Highlight.vue";
 import Scroller from "../components/partials/Scroller.vue";
 import NavGuide from "../components/partials/NavGuide.vue";
+import Section from "../components/Section.vue";
 export default {
   components: {
     SectionTitle,
     Highlight,
     Scroller,
     NavGuide,
+    Section,
   },
   data() {
     return {
