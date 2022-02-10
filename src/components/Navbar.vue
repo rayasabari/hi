@@ -1,6 +1,6 @@
 <template>
   <header
-    class="fixed inset-x-0 top-0 flex flex-col justify-between w-full text-gray-300 backdrop-filter backdrop-blur-sm lg:flex-row"
+    class="fixed inset-x-0 top-0 flex flex-col justify-between w-full text-gray-300 bg-gray-900 bg-opacity-75 backdrop-filter backdrop-blur lg:flex-row"
   >
     <div class="flex justify-center w-full lg:justify-start lg:pl-6">
       <div
