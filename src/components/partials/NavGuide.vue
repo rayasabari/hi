@@ -4,7 +4,7 @@
     :data-aos-delay="delay ? delay : '1500'"
     data-aos-duration="1000"
     :class="position"
-    class="flex justify-center my-4 bottom-28 lg:bottom-96"
+    class="z-50 flex justify-center my-4 bottom-28 lg:bottom-24"
   >
     <router-link
       :to="to"

@@ -1,39 +1,39 @@
 <template>
   <footer
-    class="px-6 py-4 text-xs flex font-thin flex-col-reverse lg:flex-row lg:justify-between animate__animated animate__fadeIn fixed bottom-0 inset-x-0 bg-gray-900 lg:bg-transparent"
+    class="fixed inset-x-0 bottom-0 flex flex-col-reverse px-6 py-4 text-xs font-thin bg-gray-900 bg-opacity-75 lg:flex-row lg:justify-between animate__animated animate__fadeIn lg:bg-transparent backdrop-blur lg:backdrop-blur-0"
   >
-    <div class="text-gray-400 m-auto lg:m-0 items-center flex font-light">
+    <div class="flex items-center m-auto font-light text-gray-400 lg:m-0">
       &copy; {{ year }}. Built with &nbsp;
       <font-awesome-icon :icon="['fas','heart']" />&nbsp; from Indonesia
     </div>
     <div
-      class="text-gray-400 pb-3 lg:pb-0 flex w-40 lg:w-36 text-xl lg:text-base justify-between m-auto lg:m-0"
+      class="flex justify-between w-40 pb-3 m-auto text-xl text-gray-400 lg:pb-0 lg:w-36 lg:text-base lg:m-0"
     >
       <a
-        class="hover:text-yellow-300 transition duration-300"
+        class="transition duration-300 hover:text-yellow-300"
         href="https://www.linkedin.com/in/rayasabari/"
       >
         <font-awesome-icon :icon="['fab','linkedin']" />
       </a>
       <a
-        class="hover:text-yellow-300 transition duration-300"
+        class="transition duration-300 hover:text-yellow-300"
         href="https://instagram.com/rayasabari"
       >
         <font-awesome-icon :icon="['fab','instagram']" />
       </a>
       <a
-        class="hover:text-yellow-300 transition duration-300"
+        class="transition duration-300 hover:text-yellow-300"
         href="https://www.facebook.com/rayasabari"
       >
         <font-awesome-icon :icon="['fab','facebook']" />
       </a>
       <a
-        class="hover:text-yellow-300 transition duration-300"
+        class="transition duration-300 hover:text-yellow-300"
         href="https://twitter.com/rayasabari"
       >
         <font-awesome-icon :icon="['fab','twitter']" />
       </a>
-      <a class="hover:text-yellow-300 transition duration-300" href="https://github.com/rayasabari">
+      <a class="transition duration-300 hover:text-yellow-300" href="https://github.com/rayasabari">
         <font-awesome-icon :icon="['fab','github']" />
       </a>
     </div>

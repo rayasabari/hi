@@ -1,6 +1,6 @@
 <template>
   <div
-    class="absolute flex items-center justify-center w-full text-gray-400 bottom-28 lg:bottom-96 animate__animated animate__fadeIn"
+    class="absolute flex items-center justify-center w-full text-gray-400 bottom-28 lg:bottom-24 animate__animated animate__fadeIn"
   >
     <a
       :href="to"

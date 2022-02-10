@@ -19,7 +19,7 @@
         </Highlight>.
         I also have a good taste in
         <span class="font-normal text-gray-300">UI/UX.</span>
-        <NavGuide :to="'/skills'" :position="''">my skills</NavGuide>
+        <NavGuide :to="'/skills'" :delay="800">my skills</NavGuide>
       </Section>
     </div>
   </div>

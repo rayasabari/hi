@@ -41,7 +41,7 @@
           >{{techName}}</div>
         </a>
       </div>
-      <NavGuide :to="'/projects'" :position="''" delay="3000">projects</NavGuide>
+      <NavGuide :to="'/projects'" :position="''" delay="2500">projects</NavGuide>
     </div>
   </div>
 </template>
