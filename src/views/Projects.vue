@@ -175,7 +175,7 @@ export default {
           img: "rhr.co.id.webp",
           visit: true,
           status: "visit",
-          link: "https://rhr.co.id",
+          link: "https://kjpp.rhr.co.id",
           techs: [
             {
               icon: "wordpress.svg",
