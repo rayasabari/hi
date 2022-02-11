@@ -4,20 +4,21 @@
     <Scroller :to="'#detail-projects'" />
     <div
       id="detail-projects"
-      class="flex items-center justify-center min-h-screen pt-16 mb-40 lg:mb-0 lg:py-24"
+      class="flex items-center justify-center min-h-screen py-16 mb-8 lg:mb-2"
     >
       <Section class="lg:w-8/12">
-        <div class="flex flex-col space-y-4 lg:space-y-0 lg:flex-row lg:flex-wrap">
+        <div class="flex flex-col mb-10 space-y-4 lg:mb-14 lg:space-y-0 lg:flex-row lg:flex-wrap">
           <div v-for="(project, index) in projects" :key="index" class="lg:w-4/12">
             <CardProject
               data-aos="fade-up"
               data-aos-duration="1000"
-              :data-aos-delay=" (index * 200)"
+              :data-aos-delay=" (index * 50)"
               :img="`./images/projects/${project.img}`"
               :project="project"
             ></CardProject>
           </div>
         </div>
+        <NavGuide :to="'/contacts'" :position="''" delay="1000">contacts</NavGuide>
       </Section>
     </div>
   </div>
@@ -25,6 +26,7 @@
 
 <script>
 import CardProject from "../components/CardProject.vue";
+import NavGuide from "../components/partials/NavGuide.vue";
 import Scroller from "../components/partials/Scroller.vue";
 import Section from "../components/Section.vue";
 import SectionTitle from "../components/SectionTitle.vue";
@@ -34,6 +36,7 @@ export default {
     Scroller,
     Section,
     CardProject,
+    NavGuide,
   },
   data() {
     return {
@@ -45,6 +48,9 @@ export default {
           year: "2022",
           role: "Front End",
           img: "propertyforsale.id.webp",
+          visit: true,
+          status: "visit",
+          link: "https://www.propertyforsale.id/",
           techs: [
             {
               icon: "nuxt.svg",
@@ -65,6 +71,9 @@ export default {
           year: "2021",
           role: "Full Stack",
           img: "rhrpln2021.webp",
+          visit: false,
+          status: "private",
+          link: "",
           techs: [
             {
               icon: "laravel.svg",
@@ -90,6 +99,9 @@ export default {
           year: "2020",
           role: "Full Stack",
           img: "ris2.webp",
+          visit: false,
+          status: "private",
+          link: "",
           techs: [
             {
               icon: "laravel.svg",
@@ -115,6 +127,9 @@ export default {
           year: "2019",
           role: "Full Stack",
           img: "rantaka.id.webp",
+          visit: true,
+          status: "visit",
+          link: "https://rantaka.id",
           techs: [
             {
               icon: "laravel.svg",
@@ -135,6 +150,9 @@ export default {
           year: "2019",
           role: "Full Stack",
           img: "sra.webp",
+          visit: false,
+          status: "offline",
+          link: "",
           techs: [
             {
               icon: "laravel.svg",
@@ -155,6 +173,9 @@ export default {
           year: "2019",
           role: "Full Stack",
           img: "rhr.co.id.webp",
+          visit: true,
+          status: "visit",
+          link: "https://rhr.co.id",
           techs: [
             {
               icon: "wordpress.svg",
@@ -170,6 +191,9 @@ export default {
           year: "2018",
           role: "Full Stack",
           img: "rhrpln2018.webp",
+          visit: false,
+          status: "private",
+          link: "",
           techs: [
             {
               icon: "laravel.svg",
@@ -190,6 +214,9 @@ export default {
           year: "2017",
           role: "Full Stack",
           img: "sispro.webp",
+          visit: false,
+          status: "private",
+          link: "",
           techs: [
             {
               icon: "codeigniter.svg",
@@ -210,6 +237,9 @@ export default {
           year: "2013",
           role: "Full Stack",
           img: "ekonomibiru.webp",
+          visit: true,
+          status: "visit",
+          link: "https://ekonomibiru.org",
           techs: [
             {
               icon: "wordpress.svg",
@@ -225,6 +255,9 @@ export default {
           year: "2013",
           role: "Front End",
           img: "hbn.webp",
+          visit: true,
+          status: "visit",
+          link: "https://hbn-group.com",
           techs: [
             {
               icon: "html5.svg",
@@ -250,6 +283,9 @@ export default {
           year: "2012",
           role: "Front End",
           img: "oss.webp",
+          visit: false,
+          status: "offline",
+          link: "",
           techs: [
             {
               icon: "html5.svg",
@@ -275,6 +311,9 @@ export default {
           year: "2012",
           role: "Front End",
           img: "icodea.webp",
+          visit: false,
+          status: "offline",
+          link: "",
           techs: [
             {
               icon: "html5.svg",
