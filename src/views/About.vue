@@ -9,17 +9,17 @@
         I enjoy building and enhance the web apps using
         <Highlight>
           <a href="https://laravel.com/" target="_blank" class="flex items-center">
-            <img src="../../public/images/laravel.svg" alt="Laravel Logo" class="w-3 h-3 mr-2" />Laravel
+            <img src="../../public/images/laravel.svg" alt="Laravel Logo" class="w-3 h-3 mr-2 lg:w-5 lg:h-5" />Laravel
           </a>
         </Highlight>and
         <Highlight>
           <a href="https://vuejs.org/" target="_blank" class="flex items-center">
-            <img src="../../public/images/vue.svg" alt="Vue.js Logo" class="w-3 h-3 mr-2" />Vue.js
+            <img src="../../public/images/vue.svg" alt="Vue.js Logo" class="w-3 h-3 mr-2 lg:w-5 lg:h-5" />Vue.js
           </a>
         </Highlight>.
         I also have a good taste in
         <span class="font-normal text-gray-300">UI/UX.</span>
-        <NavGuide :to="'/skills'" :delay="800">my skills</NavGuide>
+        <NavGuide :to="'/skills'" :delay="800">skills</NavGuide>
       </Section>
     </div>
   </div>

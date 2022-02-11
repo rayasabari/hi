@@ -5,9 +5,7 @@
     <div class="flex flex-col justify-between lg:flex-row">
       <div class="text-center lg:text-left">
         <h2 class="text-sm font-light uppercase tracking-ultra-wide">{{project.name}}</h2>
-        <p
-          class="mt-1 text-sm font-medium text-gray-300"
-        >{{project.title}}</p>
+        <p class="mt-1 text-sm font-medium text-gray-300">{{project.title}}</p>
         <p
           class="my-1 text-xs font-medium text-gray-500 transition duration-300 group-hover:text-gray-400"
         >{{ project.year }} &middot; {{project.role}}</p>
@@ -27,6 +25,18 @@
     <div
       class="h-28 lg:h-[150px] mt-6 lg:mt-3 saturate-0 group-hover:saturate-100 rounded-lg opacity-60 w-full lg:w-[400px] group-hover:opacity-80 lg:translate-x-4 lg:translate-y-2 group-hover:shadow-md group-hover:translate-x-0 group-hover:translate-y-1 transition duration-300"
     >
+      <div class="absolute flex items-end justify-center w-full h-full">
+        <a
+          v-if="project.visit"
+          :href="project.link"
+          target="_blank"
+          class="px-3 py-1 text-xs font-medium tracking-widest text-gray-900 text-opacity-0 uppercase transition duration-300 bg-yellow-300 bg-opacity-0 rounded-full group-hover:shadow-lg group-hover:bg-opacity-100 hover:-translate-y-1 hover:bg-yellow-200 group-hover:text-opacity-100"
+        >{{project.status}}</a>
+        <a
+          v-else
+          class="px-3 py-1 text-xs font-medium tracking-widest text-gray-300 text-opacity-0 uppercase transition duration-300 bg-gray-800 bg-opacity-0 rounded-full cursor-not-allowed group-hover:shadow-lg group-hover:bg-opacity-100 hover:-translate-y-1 hover:bg-gray-700 group-hover:text-opacity-100"
+        >{{project.status}}</a>
+      </div>
       <img :src="img" class="border border-gray-700 rounded-lg" />
     </div>
   </div>
