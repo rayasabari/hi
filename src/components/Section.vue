@@ -1,6 +1,6 @@
 <template>
   <section
-    class="w-11/12 font-light leading-10 text-center text-gray-400 lg:w-5/12 lg:mb-5 text-md lg:text-xl lg:leading-extra-loose"
+    class="items-center w-11/12 font-light leading-10 text-center text-gray-400 lg:mb-4 text-md xl:text-xl xl:leading-extra-loose"
   >
     <slot />
   </section>

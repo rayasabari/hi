@@ -2,12 +2,22 @@
   <div class="text-gray-300">
     <SectionTitle :title="'CONTACTS'" :subYellow="'reach'" :subGray="' & connect'" />
     <Scroller :to="'#detail-contacts'" />
-    <div id="detail-contacts" class="flex items-center justify-center h-screen">
-      <Section data-aos="fade" data-aos-duration="1000" data-aos-delay="200">
+    <div
+      id="detail-contacts"
+      class="flex items-center justify-center h-screen"
+    >
+      <Section
+        data-aos="fade"
+        data-aos-duration="1000"
+        data-aos-delay="200"
+        class="md:w-8/12 2xl:w-6/12"
+      >
         <div>For business inquiries, feel free to get in touch via email at</div>
         <div class="mt-3">
           <a
-          data-aos="fade" data-aos-duration="1000" data-aos-delay="600"
+            data-aos="fade"
+            data-aos-duration="1000"
+            data-aos-delay="600"
             href="mailto:hi@rayasabari.com"
             class="flex items-center justify-center text-lg font-medium tracking-wider text-gray-300 transition duration-300 lg:text-2xl hover:-translate-y-1 group hover:text-yellow-300"
           >

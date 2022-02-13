@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="fixed inset-x-0 bottom-0 flex flex-col-reverse px-6 py-4 text-xs font-thin bg-gray-900 bg-opacity-60 lg:flex-row lg:justify-between animate__animated animate__fadeIn lg:bg-transparent backdrop-blur lg:backdrop-blur-0"
+    class="fixed inset-x-0 bottom-0 flex flex-col-reverse px-6 py-4 text-xs font-thin bg-gray-900 bg-opacity-60 lg:flex-row lg:justify-between animate__animated animate__fadeIn 2xl:bg-transparent backdrop-blur 2xl:backdrop-blur-0"
   >
     <div class="flex items-center m-auto font-light text-gray-400 lg:m-0">
       &copy; {{ year }}. Built with &nbsp;
