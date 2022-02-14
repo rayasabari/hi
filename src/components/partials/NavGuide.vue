@@ -8,12 +8,12 @@
   >
     <router-link
       :to="to"
-      class="flex items-center text-sm text-center text-gray-400 transition duration-300 hover:text-yellow-300"
+      class="flex items-center text-sm text-center text-gray-400 transition duration-300 hover:text-yellow-400 dark:hover:text-yellow-300"
     >
       <slot />
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="w-4 h-4 text-yellow-300 animate-bounce-3"
+        class="w-4 h-4 text-yellow-400 dark:text-yellow-300 animate-bounce-3"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"

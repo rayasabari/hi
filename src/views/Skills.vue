@@ -11,7 +11,7 @@
       >
         I have 5+ years experiences in web development using
         <Highlight>
-          <a href="https://php.net/" target="_blank" class="text-gray-300">
+          <a href="https://php.net/" target="_blank">
             <font-awesome-icon class="mr-2 text-indigo-400" :icon="['fab','php']" />PHP
           </a>
         </Highlight>and
@@ -31,7 +31,7 @@
           target="_blank"
           @mouseover="techName = tech.name"
           @mouseleave="techName = ''"
-          class="flex flex-col items-center justify-center transition duration-300 opacity-50 m-7 saturate-0 brightness-200 hover:brightness-100 hover:saturate-100 hover:opacity-100 contrast-100 hover:contrast-150 filter hover:scale-125"
+          class="flex flex-col items-center justify-center transition duration-300 opacity-50 m-7 saturate-0 dark:brightness-200 hover:brightness-100 hover:saturate-100 hover:opacity-100 contrast-100 hover:contrast-150 filter hover:scale-125"
         >
           <img
             data-aos="fade-up"
@@ -44,7 +44,7 @@
           />
           <div
             v-if="techName == tech.name"
-            class="absolute mt-16 text-center text-gray-300 transition duration-300 text-3xs lg:text-2xs font-extralight lg:mt-20"
+            class="absolute mt-16 text-center text-gray-700 transition duration-300 dark:text-gray-300 text-3xs lg:text-2xs font-extralight lg:mt-20"
           >{{techName}}</div>
         </a>
       </div>

@@ -19,11 +19,11 @@
             data-aos-duration="1000"
             data-aos-delay="600"
             href="mailto:hi@rayasabari.com"
-            class="flex items-center justify-center text-lg font-medium tracking-wider text-gray-300 transition duration-300 lg:text-2xl hover:-translate-y-1 group hover:text-yellow-300"
+            class="flex items-center justify-center text-lg font-medium tracking-wider text-gray-700 transition duration-300 dark:text-gray-300 lg:text-2xl hover:-translate-y-1 group dark:hover:text-yellow-300 hover:text-yellow-400"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="w-6 h-6 mr-2 text-yellow-300 transition duration-300 lg:w-7 lg:h-7 group-hover:text-gray-300"
+              class="w-6 h-6 mr-2 text-yellow-400 transition duration-300 dark:text-yellow-300 lg:w-7 lg:h-7 dark:group-hover:text-gray-300 group-hover:text-gray-700"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"

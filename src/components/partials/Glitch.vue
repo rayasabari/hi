@@ -1,23 +1,37 @@
 <template>
   <div class="-mb-1 text-5xl italic font-bold tracking-wide lg:text-7xl">
-    <VueTextGlitch :fill="fill" :text="text" background highlight2="cyan"></VueTextGlitch>
+    <GlitchDark v-if="darkMode === 'dark'" :text="text" />
+    <GlitchLight v-else :text="text" />
   </div>
 </template>
 
 <script>
-import VueTextGlitch from "vue-text-glitch";
+import GlitchDark from "./GlitchDark.vue";
+import GlitchLight from "./GlitchLight.vue";
 export default {
   props: ["text"],
-  components: { VueTextGlitch },
-  data(){
+  components: { GlitchDark, GlitchLight },
+  data() {
     return {
-      fill: '#d1d5db',
-    }
+      darkMode: "dark",
+    };
   },
-  created(){
-    const currentMode = localStorage.getItem('darkMode');
-    currentMode === null ? this.fill = '#d1d5db' : this.fill = '#374151';
-  }
+  created() {
+    const currentMode = localStorage.getItem("darkMode");
+    this.setMode(currentMode);
+  },
+  mounted() {
+    this.$root.$on("changeMode", (mode) => {
+      this.setMode(mode);
+    });
+  },
+  methods: {
+    setMode(mode) {
+      mode === null || mode === "dark"
+        ? (this.darkMode = "dark")
+        : (this.darkMode = "light");
+    },
+  },
 };
 </script>
 

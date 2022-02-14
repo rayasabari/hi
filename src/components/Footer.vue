@@ -10,30 +10,30 @@
       class="flex justify-between w-40 pb-3 m-auto text-xl lg:pb-0 lg:w-36 lg:text-base lg:m-0"
     >
       <a
-        class="transition duration-300 hover:text-yellow-300"
+        class="transition duration-300 hover:text-yellow-400 dark:hover:text-yellow-300"
         href="https://www.linkedin.com/in/rayasabari/"
       >
         <font-awesome-icon :icon="['fab','linkedin']" />
       </a>
       <a
-        class="transition duration-300 hover:text-yellow-300"
+        class="transition duration-300 hover:text-yellow-400 dark:hover:text-yellow-300"
         href="https://instagram.com/rayasabari"
       >
         <font-awesome-icon :icon="['fab','instagram']" />
       </a>
       <a
-        class="transition duration-300 hover:text-yellow-300"
+        class="transition duration-300 hover:text-yellow-400 dark:hover:text-yellow-300"
         href="https://www.facebook.com/rayasabari"
       >
         <font-awesome-icon :icon="['fab','facebook']" />
       </a>
       <a
-        class="transition duration-300 hover:text-yellow-300"
+        class="transition duration-300 hover:text-yellow-400 dark:hover:text-yellow-300"
         href="https://twitter.com/rayasabari"
       >
         <font-awesome-icon :icon="['fab','twitter']" />
       </a>
-      <a class="transition duration-300 hover:text-yellow-300" href="https://github.com/rayasabari">
+      <a class="transition duration-300 hover:text-yellow-400 dark:hover:text-yellow-300" href="https://github.com/rayasabari">
         <font-awesome-icon :icon="['fab','github']" />
       </a>
     </div>

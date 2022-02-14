@@ -41,25 +41,25 @@
       </div>
     </div>
     <nav
-      :class="open == false ? 'hidden' : 'bg-gray-900'"
-      class="absolute flex flex-col items-center justify-center w-full h-screen text-xl font-light lg:flex animate__animated animate__fadeIn lg:w-auto lg:static lg:h-auto lg:flex-row lg:items-center lg:text-sm lg:py-4"
+      :class="open == false ? 'hidden' : 'dark:bg-gray-900 bg-white'"
+      class="absolute flex flex-col items-center justify-center w-full h-screen text-xl font-light transition duration-500 lg:flex animate__animated animate__fadeIn lg:w-auto lg:static lg:h-auto lg:flex-row lg:items-center lg:text-sm lg:py-4"
     >
       <ul class="flex flex-col lg:flex-row lg:items-center">
         <li v-for="(menu, index) in menus" :key="index" @click="open = false">
           <router-link
             :exact="menu.link == '/' ? true : false"
             :to="menu.link"
-            class="block px-6 py-5 text-2xl font-medium text-center text-gray-400 duration-300 transitino lg:py-2 lg:text-sm hover:text-gray-300"
+            class="block px-6 py-5 text-2xl font-medium text-center text-gray-400 transition duration-300 lg:py-2 lg:text-sm hover:text-gray-700 dark:hover:text-gray-300"
           >{{menu.name}}</router-link>
         </li>
         <li>
           <button
             @click="toogleDarkMode"
-            class="block px-6 py-5 text-2xl font-normal text-center text-gray-400 hover:text-yellow-500 dark:hover:text-yellow-300 lg:py-2 lg:text-sm lg:font-light"
+            class="flex items-center justify-center w-full px-6 py-5 text-2xl font-normal text-gray-400 transition duration-300 hover:text-yellow-400 dark:hover:text-yellow-300 lg:py-2 lg:text-sm lg:font-light"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="w-5 h-5"
+              class="w-5 h-5 mr-2 lg:mr-0"
               viewBox="0 0 20 20"
               fill="currentColor"
             >
@@ -74,6 +74,9 @@
                 d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
               />
             </svg>
+            <span
+              class="text-sm font-light lg:hidden"
+            >{{darkMode === 'dark' ? 'light' : 'dark'}} mode</span>
           </button>
         </li>
       </ul>
@@ -107,6 +110,7 @@ export default {
       this.darkMode = this.darkMode == "dark" ? "light" : "dark";
       localStorage.setItem("darkMode", this.darkMode);
       this.setMode(this.darkMode);
+      this.$root.$emit("changeMode", this.darkMode);
     },
     setMode(mode) {
       const html = document.querySelector("html");
