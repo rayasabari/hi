@@ -3,7 +3,12 @@
     <SectionTitle :title="'SKILLS'" :subYellow="'techs'" :subGray="' & tools'" />
     <Scroller :to="'#detail-skills'" />
     <div id="detail-skills" class="flex flex-col items-center justify-center h-screen">
-      <Section data-aos="fade" data-aos-duration="1000" data-aos-delay="200" class="md:w-8/12 2xl:w-6/12">
+      <Section
+        data-aos="fade"
+        data-aos-duration="1000"
+        data-aos-delay="200"
+        class="md:w-8/12 2xl:w-6/12"
+      >
         I have 5+ years experiences in web development using
         <Highlight>
           <a href="https://php.net/" target="_blank" class="text-gray-300">
@@ -16,7 +21,9 @@
           </a>
         </Highlight>. I am pretty confident in building apps using these techs:
       </Section>
-      <div class="flex flex-wrap items-center justify-center w-10/12 mt-2 lg:-mt-1 lg:w-5/12 xl:w-5/12 2xl:w-4/12">
+      <div
+        class="flex flex-wrap items-center justify-center w-10/12 mt-2 lg:-mt-1 lg:w-5/12 xl:w-5/12 2xl:w-4/12"
+      >
         <a
           v-for="(tech,index) in techs"
           :key="index"
