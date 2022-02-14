@@ -43,7 +43,7 @@ const routes = [
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  linkActiveClass: 'text-yellow-300',
+  linkActiveClass: 'dark:text-yellow-300 text-yellow-400',
   routes
 })
 
