@@ -5,7 +5,7 @@
     <div id="detail-about" class="flex items-center justify-center h-screen">
       <Section data-aos="fade" data-aos-duration="1000" data-aos-delay="200" class="md:w-8/12 2xl:w-6/12">
         I am currently working as a
-        <span class="font-normal text-gray-700 dark:text-gray-300">Full Stack Developer</span> at public appraiser company in Jakarta.
+        <span class="font-normal text-gray-700 transition duration-300 dark:text-gray-300">Full Stack Developer</span> at public appraiser company in Jakarta.
         I enjoy building and enhance the web apps using
         <Highlight>
           <!-- <a href="https://laravel.com/" target="_blank" class="flex items-center">
@@ -24,7 +24,7 @@
           </a>
         </Highlight>.
         I also have a good taste in
-        <span class="font-normal text-gray-700 dark:text-gray-300">UI/UX Design.</span>
+        <span class="font-normal text-gray-700 transition duration-300 dark:text-gray-300">UI/UX Design.</span>
         <NavGuide :to="'/skills'" :delay="800">skills</NavGuide>
       </Section>
     </div>
