@@ -25,14 +25,14 @@
       </div>
     </div>
     <div
-      class="h-28 xl:h-[130px] mt-6 xl:mt-3 saturate-0 group-hover:saturate-100 rounded-lg opacity-60 w-full group-hover:opacity-80 xl:translate-x-0 xl:translate-y-0 group-hover:shadow-md group-hover:translate-x-0 group-hover:translate-y-1 transition duration-300"
+      class="h-28 xl:h-[130px] mt-6 xl:mt-3 saturate-0 group-hover:saturate-100 rounded-lg opacity-80 dark:opacity-60 w-full group-hover:opacity-100 xl:translate-x-0 xl:translate-y-0 group-hover:shadow-md group-hover:translate-x-0 group-hover:translate-y-1 transition duration-300"
     >
       <div class="absolute flex items-end justify-center w-full h-full">
         <a
           v-if="project.visit"
           :href="project.link"
           target="_blank"
-          class="px-3 py-1 text-xs font-medium tracking-widest text-gray-900 text-opacity-0 uppercase transition duration-300 bg-yellow-400 bg-opacity-0 rounded-full dark:bg-yellow-300 group-hover:shadow-lg group-hover:bg-opacity-100 hover:-translate-y-1 hover:bg-yellow-200 group-hover:text-opacity-100"
+          class="px-3 py-1 text-xs font-medium tracking-widest text-gray-900 text-opacity-0 uppercase transition duration-300 bg-yellow-400 bg-opacity-0 rounded-full dark:bg-opacity-0 dark:bg-yellow-300 group-hover:shadow-lg group-hover:bg-opacity-100 hover:-translate-y-1 hover:bg-yellow-200 group-hover:text-opacity-100"
         >{{project.status}}</a>
         <a
           v-else
