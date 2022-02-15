@@ -31,7 +31,7 @@
           target="_blank"
           @mouseover="techName = tech.name"
           @mouseleave="techName = ''"
-          class="flex flex-col items-center justify-center transition duration-300 opacity-50 m-7 saturate-0 dark:brightness-200 hover:brightness-100 hover:saturate-100 hover:opacity-100 contrast-100 hover:contrast-150 filter hover:scale-125"
+          class="flex flex-col items-center justify-center transition duration-300 opacity-50 m-7 saturate-0 dark:brightness-150 brightness-60 hover:brightness-100 dark:hover:brightness-100 hover:saturate-100 hover:opacity-100 contrast-100 hover:contrast-150 filter hover:scale-125"
         >
           <img
             data-aos="fade-up"

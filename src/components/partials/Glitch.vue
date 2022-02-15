@@ -1,5 +1,5 @@
 <template>
-  <div class="-mb-1 text-5xl italic font-bold tracking-wide lg:text-7xl">
+  <div class="-mb-1 text-5xl italic font-semibold tracking-wide lg:text-7xl">
     <GlitchDark v-if="darkMode === 'dark'" :text="text" />
     <GlitchLight v-else :text="text" />
   </div>

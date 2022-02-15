@@ -1,6 +1,6 @@
 <template>
   <header
-    class="fixed inset-x-0 top-0 flex flex-col justify-between w-full text-gray-700 transition duration-500 bg-white dark:text-gray-300 bg-opacity-80 dark:bg-gray-900 dark:bg-opacity-60 backdrop-filter backdrop-blur lg:flex-row"
+    class="fixed inset-x-0 top-0 flex flex-col justify-between w-full text-gray-500 transition duration-500 bg-gray-50 dark:text-gray-300 bg-opacity-80 dark:bg-gray-900 dark:bg-opacity-60 backdrop-filter backdrop-blur lg:flex-row"
   >
     <div class="flex justify-center w-full lg:justify-start lg:pl-6">
       <div
@@ -12,7 +12,7 @@
           exact
           active-class="dark:text-gray-300"
           to="/"
-          class="text-2xl italic font-medium"
+          class="text-2xl italic font-semibold"
         >RYSB</router-link>
         <button @click="open = !open" class="block lg:hidden">
           <svg
@@ -41,15 +41,15 @@
       </div>
     </div>
     <nav
-      :class="open == false ? 'hidden' : 'dark:bg-gray-900 bg-white'"
-      class="absolute flex flex-col items-center justify-center w-full h-screen text-xl font-light transition duration-500 lg:flex animate__animated animate__fadeIn lg:w-auto lg:static lg:h-auto lg:flex-row lg:items-center lg:text-sm lg:py-4"
+      :class="open == false ? 'hidden' : 'dark:bg-gray-900 bg-gray-50'"
+      class="absolute flex flex-col items-center justify-center w-full h-screen text-xl font-medium transition duration-500 lg:flex animate__animated animate__fadeIn lg:w-auto lg:static lg:h-auto lg:flex-row lg:items-center lg:text-sm lg:py-4"
     >
       <ul class="flex flex-col lg:flex-row lg:items-center">
         <li v-for="(menu, index) in menus" :key="index" @click="open = false">
           <router-link
             :exact="menu.link == '/' ? true : false"
             :to="menu.link"
-            class="block px-6 py-5 text-2xl font-medium text-center text-gray-400 transition duration-300 lg:py-2 lg:text-sm hover:text-gray-700 dark:hover:text-gray-300"
+            class="block px-6 py-5 text-2xl font-medium text-center text-gray-400 transition duration-300 focus:bg-transparent lg:py-2 lg:text-sm hover:text-gray-700 dark:hover:text-gray-300"
           >{{menu.name}}</router-link>
         </li>
         <li>
@@ -109,6 +109,7 @@ export default {
     toogleDarkMode() {
       this.darkMode = this.darkMode == "dark" ? "light" : "dark";
       localStorage.setItem("darkMode", this.darkMode);
+      this.open = false;
       this.setMode(this.darkMode);
       this.$root.$emit("changeMode", this.darkMode);
     },
