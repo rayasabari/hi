@@ -6,7 +6,7 @@
       class="flex flex-col items-center justify-center h-90"
     >
       <Glitch :text="title"></Glitch>
-      <Typer class="text-base" :text="tagline"></Typer>
+      <Typer :text="tagline"></Typer>
     </div>
     <NavGuide :to="'/about'" position="absolute" :delay="1000">discover</NavGuide>
   </div>

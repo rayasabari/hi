@@ -1,7 +1,7 @@
 <template>
   <div>
     <vue-typer
-      class="font-light"
+      class="font-medium"
       :text="text"
       :repeat="Infinity"
       :shuffle="false"
@@ -24,7 +24,7 @@ export default {
 </script>
 
 <style>
- .vue-typer .custom.char {
+.vue-typer .custom.char {
   /* color: #fcd34d; */
   color: #9ca3af;
 }
