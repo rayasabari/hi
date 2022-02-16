@@ -4,7 +4,7 @@
       <Glitch :text="title"></Glitch>
       <div>
         <span class="text-yellow-400 dark:text-yellow-300">{{subYellow}}</span>
-        <span class="text-gray-400">{{subGray}}</span>
+        <span class="text-gray-500 dark:text-gray-400">{{subGray}}</span>
       </div>
     </div>
   </div>
