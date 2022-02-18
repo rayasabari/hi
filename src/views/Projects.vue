@@ -239,7 +239,7 @@ export default {
           img: "ekonomibiru.webp",
           visit: true,
           status: "visit",
-          link: "https://ekonomibiru.org",
+          link: "http://ekonomibiru.org",
           techs: [
             {
               icon: "wordpress.svg",
