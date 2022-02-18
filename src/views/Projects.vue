@@ -277,7 +277,7 @@ export default {
           ],
         },
         {
-          name: "Ocean Seven Store",
+          name: "Ocean Seven",
           title: "Landing Page",
           tag: "Web Development",
           year: "2012",
