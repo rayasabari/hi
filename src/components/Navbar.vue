@@ -1,6 +1,6 @@
 <template>
   <header
-    class="fixed inset-x-0 top-0 flex flex-col justify-between w-full text-gray-500 transition duration-500 bg-gray-50 dark:text-gray-300 bg-opacity-80 dark:bg-gray-900 dark:bg-opacity-60 backdrop-filter backdrop-blur lg:flex-row"
+    class="fixed inset-x-0 top-0 flex flex-col justify-between w-full text-gray-500 transition duration-500 bg-gray-50 dark:text-gray-300 bg-opacity-80 2xl:bg-opacity-0 dark:2xl:bg-opacity-0 dark:bg-gray-900 dark:bg-opacity-60 backdrop-filter backdrop-blur lg:flex-row"
   >
     <div class="flex justify-center w-full lg:justify-start lg:pl-6">
       <div
@@ -49,13 +49,14 @@
           <router-link
             :exact="menu.link == '/' ? true : false"
             :to="menu.link"
-            class="block px-6 py-5 text-2xl font-medium text-center text-gray-400 transition duration-300 focus:bg-transparent lg:py-2 lg:text-sm hover:text-gray-700 dark:hover:text-gray-300"
+            class="block px-6 py-5 text-2xl font-medium text-center text-gray-500 transition duration-300 dark:text-gray-400 focus:bg-transparent lg:py-2 lg:text-sm hover:text-gray-700 dark:hover:text-gray-300"
           >{{menu.name}}</router-link>
         </li>
         <li>
           <button
             @click="toogleDarkMode"
-            class="flex items-center justify-center w-full px-6 py-5 text-2xl font-normal text-gray-400 transition duration-300 hover:text-yellow-400 dark:hover:text-yellow-300 lg:py-2 lg:text-sm lg:font-light"
+            aria-label="ToggleMode"
+            class="flex items-center justify-center w-full px-6 py-5 text-2xl font-normal text-gray-500 transition duration-300 dark:text-gray-400 hover:text-yellow-400 dark:hover:text-yellow-300 lg:py-2 lg:text-sm lg:font-light"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

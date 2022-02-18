@@ -8,7 +8,7 @@
   >
     <router-link
       :to="to"
-      class="flex items-center text-sm text-center text-gray-400 transition duration-300 hover:text-yellow-400 dark:hover:text-yellow-300"
+      class="flex items-center text-sm text-center text-gray-500 transition duration-300 dark:text-gray-400 hover:text-yellow-400 dark:hover:text-yellow-300"
     >
       <slot />
       <svg

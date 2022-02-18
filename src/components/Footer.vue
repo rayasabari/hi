@@ -6,34 +6,40 @@
       &copy; {{ year }}. Built with &nbsp;
       <font-awesome-icon :icon="['fas','heart']" />&nbsp; from Indonesia
     </div>
-    <div
-      class="flex justify-between w-40 pb-3 m-auto text-xl lg:pb-0 lg:w-36 lg:text-base lg:m-0"
-    >
+    <div class="flex justify-between w-40 pb-3 m-auto text-xl lg:pb-0 lg:w-36 lg:text-base lg:m-0">
       <a
+        aria-label="Linkedin"
         class="transition duration-300 hover:text-yellow-400 dark:hover:text-yellow-300"
         href="https://www.linkedin.com/in/rayasabari/"
       >
         <font-awesome-icon :icon="['fab','linkedin']" />
       </a>
       <a
+        aria-label="Instagram"
         class="transition duration-300 hover:text-yellow-400 dark:hover:text-yellow-300"
         href="https://instagram.com/rayasabari"
       >
         <font-awesome-icon :icon="['fab','instagram']" />
       </a>
       <a
+        aria-label="Facebook"
         class="transition duration-300 hover:text-yellow-400 dark:hover:text-yellow-300"
         href="https://www.facebook.com/rayasabari"
       >
         <font-awesome-icon :icon="['fab','facebook']" />
       </a>
       <a
+        aria-label="Twitter"
         class="transition duration-300 hover:text-yellow-400 dark:hover:text-yellow-300"
         href="https://twitter.com/rayasabari"
       >
         <font-awesome-icon :icon="['fab','twitter']" />
       </a>
-      <a class="transition duration-300 hover:text-yellow-400 dark:hover:text-yellow-300" href="https://github.com/rayasabari">
+      <a
+        aria-label="Github"
+        class="transition duration-300 hover:text-yellow-400 dark:hover:text-yellow-300"
+        href="https://github.com/rayasabari"
+      >
         <font-awesome-icon :icon="['fab','github']" />
       </a>
     </div>
