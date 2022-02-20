@@ -7,8 +7,10 @@
       class="flex items-center justify-center min-h-screen py-16 mb-8 lg:mb-2"
     >
       <Section class="xl:w-9/12 2xl:w-8/12">
-        <div class="grid grid-cols-1 gap-6 mb-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-2 xl:grid-cols-3">
-          <div v-for="(project, index) in projects" :key="index" class="">
+        <div
+          class="grid grid-cols-1 gap-6 mb-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-2 xl:grid-cols-3"
+        >
+          <div v-for="(project, index) in projects" :key="index" class>
             <CardProject
               data-aos="fade-up"
               data-aos-duration="1000"
@@ -204,6 +206,11 @@ export default {
               icon: "bootstrap.svg",
               link: "https://getbootstrap.com",
               name: "Bootstrap",
+            },
+            {
+              icon: "jquery.svg",
+              link: "https://jquery.com/",
+              name: "Jquery",
             },
           ],
         },
