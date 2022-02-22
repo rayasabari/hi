@@ -143,6 +143,11 @@ export default {
               link: "https://getbootstrap.com",
               name: "Bootstrap",
             },
+            {
+              icon: "jquery.svg",
+              link: "https://jquery.com/",
+              name: "Jquery",
+            },
           ],
         },
         {
