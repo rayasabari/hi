@@ -139,14 +139,14 @@ export default {
               name: "Laravel",
             },
             {
+              icon: "jquery.svg",
+              link: "https://jquery.com/",
+              name: "jQuery",
+            },
+            {
               icon: "bootstrap.svg",
               link: "https://getbootstrap.com",
               name: "Bootstrap",
-            },
-            {
-              icon: "jquery.svg",
-              link: "https://jquery.com/",
-              name: "Jquery",
             },
           ],
         },
@@ -167,14 +167,14 @@ export default {
               name: "Laravel",
             },
             {
+              icon: "jquery.svg",
+              link: "https://jquery.com/",
+              name: "jQuery",
+            },
+            {
               icon: "bootstrap.svg",
               link: "https://getbootstrap.com",
               name: "Bootstrap",
-            },
-            {
-              icon: "jquery.svg",
-              link: "https://jquery.com/",
-              name: "Jquery",
             },
           ],
         },
@@ -213,14 +213,14 @@ export default {
               name: "Laravel",
             },
             {
+              icon: "jquery.svg",
+              link: "https://jquery.com/",
+              name: "jQuery",
+            },
+            {
               icon: "bootstrap.svg",
               link: "https://getbootstrap.com",
               name: "Bootstrap",
-            },
-            {
-              icon: "jquery.svg",
-              link: "https://jquery.com/",
-              name: "Jquery",
             },
           ],
         },
@@ -241,14 +241,14 @@ export default {
               name: "Codeigniter",
             },
             {
+              icon: "jquery.svg",
+              link: "https://jquery.com/",
+              name: "jQuery",
+            },
+            {
               icon: "bootstrap.svg",
               link: "https://getbootstrap.com",
               name: "Bootstrap",
-            },
-            {
-              icon: "jquery.svg",
-              link: "https://jquery.com/",
-              name: "Jquery",
             },
           ],
         },
@@ -294,7 +294,7 @@ export default {
             {
               icon: "jquery.svg",
               link: "https://jquery.com/",
-              name: "Jquery",
+              name: "jQuery",
             },
           ],
         },
@@ -322,7 +322,7 @@ export default {
             {
               icon: "jquery.svg",
               link: "https://jquery.com/",
-              name: "Jquery",
+              name: "jQuery",
             },
           ],
         },
