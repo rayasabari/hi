@@ -48,6 +48,34 @@
           >{{techName}}</div>
         </a>
       </div>
+      <div
+        class="flex flex-wrap items-center justify-center w-10/12 mt-2 lg:-mt-1 lg:w-5/12 xl:w-5/12 2xl:w-4/12"
+      >
+        <a
+          v-for="(tech,index) in tools"
+          :key="index"
+          :href="tech.link"
+          v-tooltip.bottom="tech.name"
+          target="_blank"
+          @mouseover="techName = tech.name"
+          @mouseleave="techName = ''"
+          class="flex flex-col items-center justify-center m-4 transition duration-300 opacity-70 dark:opacity-60 saturate-0 dark:brightness-150 brightness-100 hover:brightness-100 dark:hover:brightness-100 hover:saturate-100 hover:opacity-100 dark:hover:opacity-100 dark:hover:contrast-150 hover:contrast-150 filter hover:scale-125"
+        >
+          <img
+            data-aos="fade-up"
+            data-aos-duration="500"
+            :data-aos-delay="600 + (index * 200)"
+            :src="`./images/${tech.icon}`"
+            :alt="tech.name"
+            :class="tech.icon == 'bootstrap.svg' ? 'w-auto' :'w-8 xl:w-6'"
+            class="h-8 xl:h-6"
+          />
+          <!-- <div
+            v-if="techName == tech.name"
+            class="absolute mt-16 text-center text-gray-700 transition duration-300 dark:text-gray-300 text-3xs lg:text-2xs font-extralight lg:mt-20"
+          >{{techName}}</div> -->
+        </a>
+      </div>
       <NavGuide :to="'/projects'" :position="''" delay="2500">projects</NavGuide>
     </div>
   </div>
@@ -115,6 +143,33 @@ export default {
           icon: "next.webp",
           link: "https://nextjs.org/",
           name: "Next JS",
+        },
+      ],
+      tools: [
+        {
+          icon: "vscode.svg",
+          link: "https://laravel.com",
+          name: "VS Code",
+        },
+        {
+          icon: "tableplus.png",
+          link: "https://laravel.com",
+          name: "Tableplus",
+        },
+        {
+          icon: "postman.svg",
+          link: "https://laravel.com",
+          name: "Postman",
+        },
+        {
+          icon: "termius.svg",
+          link: "https://laravel.com",
+          name: "Termius",
+        },
+        {
+          icon: "filezilla.svg",
+          link: "https://laravel.com",
+          name: "Filezilla",
         },
       ],
     };
