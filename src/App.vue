@@ -12,6 +12,7 @@ import Navbar from "./components/Navbar.vue";
 import Content from "./components/Content.vue";
 import Footer from "./components/Footer.vue";
 import Notiflix from "notiflix";
+
 export default {
   components: {
     Navbar,

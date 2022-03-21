@@ -19,6 +19,7 @@
     "aos": "^2.3.4",
     "autoprefixer": "^10.4.2",
     "core-js": "^3.6.5",
+    "firebase": "^9.6.9",
     "notiflix": "^3.2.2",
     "postcss": "^8.4.5",
     "v-tooltip": "^2.1.3",

@@ -49,31 +49,27 @@
         </a>
       </div>
       <div
-        class="flex flex-wrap items-center justify-center w-10/12 mt-2 lg:-mt-1 lg:w-5/12 xl:w-5/12 2xl:w-4/12"
+        class="flex flex-wrap items-center justify-center w-10/12 mt-2 lg:mt-5 lg:w-5/12 xl:w-5/12 2xl:w-4/12"
       >
         <a
-          v-for="(tech,index) in tools"
+          v-for="(tool,index) in tools"
           :key="index"
-          :href="tech.link"
-          v-tooltip.bottom="tech.name"
+          :href="tool.link"
+          v-tooltip.bottom="tool.name"
           target="_blank"
-          @mouseover="techName = tech.name"
-          @mouseleave="techName = ''"
+          @mouseover="toolName = tool.name"
+          @mouseleave="toolName = ''"
           class="flex flex-col items-center justify-center m-4 transition duration-300 opacity-70 dark:opacity-60 saturate-0 dark:brightness-150 brightness-100 hover:brightness-100 dark:hover:brightness-100 hover:saturate-100 hover:opacity-100 dark:hover:opacity-100 dark:hover:contrast-150 hover:contrast-150 filter hover:scale-125"
         >
           <img
             data-aos="fade-up"
             data-aos-duration="500"
             :data-aos-delay="600 + (index * 200)"
-            :src="`./images/${tech.icon}`"
-            :alt="tech.name"
-            :class="tech.icon == 'bootstrap.svg' ? 'w-auto' :'w-8 xl:w-6'"
-            class="h-8 xl:h-6"
+            :src="`./images/${tool.icon}`"
+            :alt="tool.name"
+            :class="tool.icon == 'bootstrap.svg' ? 'w-auto' :'w-4 xl:w-6'"
+            class="h-4 xl:h-6"
           />
-          <!-- <div
-            v-if="techName == tech.name"
-            class="absolute mt-16 text-center text-gray-700 transition duration-300 dark:text-gray-300 text-3xs lg:text-2xs font-extralight lg:mt-20"
-          >{{techName}}</div> -->
         </a>
       </div>
       <NavGuide :to="'/projects'" :position="''" delay="2500">projects</NavGuide>
@@ -87,6 +83,8 @@ import Highlight from "../components/partials/Highlight.vue";
 import Scroller from "../components/partials/Scroller.vue";
 import NavGuide from "../components/partials/NavGuide.vue";
 import Section from "../components/Section.vue";
+import firebase from "../firebase";
+import { getDatabase, ref, onValue } from "firebase/database";
 export default {
   components: {
     SectionTitle,
@@ -98,87 +96,35 @@ export default {
   data() {
     return {
       techName: "",
-      techs: [
-        {
-          icon: "laravel.svg",
-          link: "https://laravel.com",
-          name: "Laravel",
-        },
-        {
-          icon: "tailwind.svg",
-          link: "https://tailwindcss.com",
-          name: "Tailwind",
-        },
-        {
-          icon: "vue.svg",
-          link: "https://vuejs.org",
-          name: "Vue JS",
-        },
-        {
-          icon: "nuxt.svg",
-          link: "https://nuxtjs.org",
-          name: "Nuxt JS",
-        },
-        {
-          icon: "wordpress.svg",
-          link: "https://wordpress.com",
-          name: "Wordpress",
-        },
-        {
-          icon: "codeigniter.svg",
-          link: "https://codeigniter.com",
-          name: "Codeigniter",
-        },
-        {
-          icon: "bootstrap.svg",
-          link: "https://getbootstrap.com",
-          name: "Bootstrap",
-        },
-        {
-          icon: "react.svg",
-          link: "https://reactjs.org/",
-          name: "React JS",
-        },
-        {
-          icon: "next.webp",
-          link: "https://nextjs.org/",
-          name: "Next JS",
-        },
-      ],
-      tools: [
-        {
-          icon: "vscode.svg",
-          link: "https://laravel.com",
-          name: "VS Code",
-        },
-        {
-          icon: "tableplus.png",
-          link: "https://laravel.com",
-          name: "Tableplus",
-        },
-        {
-          icon: "postman.svg",
-          link: "https://laravel.com",
-          name: "Postman",
-        },
-        {
-          icon: "termius.svg",
-          link: "https://laravel.com",
-          name: "Termius",
-        },
-        {
-          icon: "filezilla.svg",
-          link: "https://laravel.com",
-          name: "Filezilla",
-        },
-      ],
+      techs: [],
+      tools: [],
     };
+  },
+  created() {
+    this.fetchData();
   },
   mounted() {
     window.scrollTo(0, 0);
   },
   methods: {
-    test() {},
+    fetchData(){
+      this.fetchSkills('techs');
+      this.fetchSkills('tools');
+    },
+    fetchSkills(table) {
+      const db = getDatabase(firebase);
+      const skillsRef = ref(db, table);
+      onValue(skillsRef, (data) => {
+        this[table] = [];
+        data.val().forEach((item) => {
+          this[table].push({
+            name: item.name,
+            icon: item.icon,
+            link: item.link,
+          });
+        });
+      });
+    },
   },
 };
 </script>
