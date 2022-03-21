@@ -9,25 +9,18 @@
         data-aos-delay="200"
         class="md:w-8/12 2xl:w-6/12"
       >
-        I am currently working as a
-        <span
-          class="font-medium text-gray-700 transition duration-300 dark:text-gray-300"
-        >Full Stack Developer</span> at public appraiser company in Jakarta.
-        I enjoy building and enhance the web apps using
-        <Highlight>
-          <a href="https://laravel.com/" target="_blank">
-            <font-awesome-icon class="mr-2 text-rose-500" :icon="['fab','laravel']" />Laravel
-          </a>
-        </Highlight>and
-        <Highlight>
-          <a href="https://vuejs.org" target="_blank">
-            <font-awesome-icon class="mr-2 text-green-500" :icon="['fab','vuejs']" />Vue JS
-          </a>
-        </Highlight>.
-        I also have a good taste in
-        <span
-          class="font-medium text-gray-700 transition duration-300 dark:text-gray-300"
-        >UI/UX Design.</span>
+        <span v-for="item in body" :key="item.order">
+          <span v-if="item.type == 'text'">{{ item.value }}</span>
+          <span v-if="item.type == 'text-bold'">
+            <TextBold>{{ item.value }}</TextBold>
+          </span>
+          <span v-if="item.type == 'highlight'">
+            <span v-for="(highlight, idx) in highlights" :key="idx">
+              <span v-if="(highlights.length - 1) == idx">and</span>
+              <Highlight :data="highlight"></Highlight>
+            </span>
+          </span>
+        </span>
         <NavGuide :to="'/skills'" :delay="800">skills</NavGuide>
       </Section>
     </div>
@@ -36,20 +29,64 @@
 
 <script>
 import Highlight from "../components/partials/Highlight.vue";
+import TextBold from "../components/partials/TextBold.vue";
 import NavGuide from "../components/partials/NavGuide.vue";
 import Scroller from "../components/partials/Scroller.vue";
 import Section from "../components/Section.vue";
 import SectionTitle from "../components/SectionTitle.vue";
+import firebase from "../firebase";
+import { getDatabase, ref, onValue } from "firebase/database";
+const db = getDatabase(firebase);
 export default {
+  name: "About",
   components: {
     Highlight,
+    TextBold,
     SectionTitle,
     Scroller,
     NavGuide,
     Section,
   },
+  data() {
+    return {
+      body: [],
+      highlights: [],
+    };
+  },
+  created() {
+    this.fetchData();
+  },
   mounted() {
     window.scrollTo(0, 0);
+  },
+  methods: {
+    fetchData() {
+      this.fetchSections("sections/about/highlights", "highlights");
+      this.fetchSections("sections/about/body", "body");
+    },
+    fetchSections(reference, type) {
+      const sectionsRef = ref(db, reference);
+      onValue(sectionsRef, (data) => {
+        this[type] = [];
+        data.val().forEach((item) => {
+          if (type == "highlights") {
+            this[type].push({
+              name: item.name,
+              icon: item.icon,
+              link: item.link,
+              color: item.color,
+            });
+          }
+          if (type == "body") {
+            this[type].push({
+              type: item.type,
+              value: item.value,
+              order: item.order,
+            });
+          }
+        });
+      });
+    },
   },
 };
 </script>

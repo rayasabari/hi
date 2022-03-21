@@ -1,6 +1,6 @@
 <template>
   <div class="text-gray-300">
-    <SectionTitle :title="'SKILLS'" :subYellow="'techs'" :subGray="' & tools'" />
+    <SectionTitle :title="'SKILLS'" :subYellow="'techs'" :subGray="' & stacks'" />
     <Scroller :to="'#detail-skills'" />
     <div id="detail-skills" class="flex flex-col items-center justify-center h-screen">
       <Section
@@ -9,17 +9,15 @@
         data-aos-delay="200"
         class="md:w-8/12 2xl:w-6/12"
       >
-        I have 5+ years experiences in web development using
-        <Highlight>
-          <a href="https://php.net/" target="_blank">
-            <font-awesome-icon class="mr-2 text-indigo-400" :icon="['fab','php']" />PHP
-          </a>
-        </Highlight>and
-        <Highlight>
-          <a href="https://javascript.com/" target="_blank">
-            <font-awesome-icon class="mr-2 text-yellow-400" :icon="['fab','js']" />Javascript
-          </a>
-        </Highlight>. I am pretty confident in building apps using these techs:
+        <span v-for="item in body" :key="item.order">
+          <span v-if="item.type == 'text'">{{ item.value }}</span>
+          <span v-if="item.type == 'highlight'">
+            <span v-for="(highlight, idx) in highlights" :key="idx">
+              <span v-if="(highlights.length - 1) == idx">and</span>
+              <Highlight :data="highlight"></Highlight>
+            </span>
+          </span>
+        </span>
       </Section>
       <div
         class="flex flex-wrap items-center justify-center w-10/12 mt-2 lg:-mt-1 lg:w-5/12 xl:w-5/12 2xl:w-4/12"
@@ -85,6 +83,7 @@ import NavGuide from "../components/partials/NavGuide.vue";
 import Section from "../components/Section.vue";
 import firebase from "../firebase";
 import { getDatabase, ref, onValue } from "firebase/database";
+const db = getDatabase(firebase);
 export default {
   components: {
     SectionTitle,
@@ -96,6 +95,8 @@ export default {
   data() {
     return {
       techName: "",
+      body: [],
+      highlights: [],
       techs: [],
       tools: [],
     };
@@ -107,21 +108,45 @@ export default {
     window.scrollTo(0, 0);
   },
   methods: {
-    fetchData(){
-      this.fetchSkills('techs');
-      this.fetchSkills('tools');
+    fetchData() {
+      this.fetchSections("sections/skills/highlights", "highlights");
+      this.fetchSections("sections/skills/body", "body");
+      this.fetchSkills("techs");
+      this.fetchSkills("tools");
     },
-    fetchSkills(table) {
-      const db = getDatabase(firebase);
-      const skillsRef = ref(db, table);
+    fetchSkills(reference) {
+      const skillsRef = ref(db, reference);
       onValue(skillsRef, (data) => {
-        this[table] = [];
+        this[reference] = [];
         data.val().forEach((item) => {
-          this[table].push({
+          this[reference].push({
             name: item.name,
             icon: item.icon,
             link: item.link,
           });
+        });
+      });
+    },
+    fetchSections(reference, type) {
+      const sectionsRef = ref(db, reference);
+      onValue(sectionsRef, (data) => {
+        this[type] = [];
+        data.val().forEach((item) => {
+          if (type == "highlights") {
+            this[type].push({
+              name: item.name,
+              icon: item.icon,
+              link: item.link,
+              color: item.color,
+            });
+          }
+          if (type == "body") {
+            this[type].push({
+              type: item.type,
+              value: item.value,
+              order: item.order,
+            });
+          }
         });
       });
     },
