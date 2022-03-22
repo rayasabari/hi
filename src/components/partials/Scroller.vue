@@ -8,6 +8,7 @@
   >
     <a
       :href="to"
+      aria-label="Scroll Down"
       class="p-1 text-yellow-300 transition duration-300 bg-gray-900 rounded-full hover:bg-yellow-300 hover:text-gray-900 animate-bounce-2"
     >
       <svg

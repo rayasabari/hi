@@ -1,11 +1,12 @@
 <template>
   <div class="text-gray-300">
     <SectionTitle
+      v-if="title.text != ''"
       :title="title.text"
       :subYellow="title.sub_primary"
       :subGray="title.sub_secondary"
     />
-    <Scroller :to="'#detail-about'" />
+    <Scroller :to="'#detail-about'"/>
     <div id="detail-about" class="flex items-center justify-center h-screen">
       <Section
         data-aos="fade"
@@ -13,18 +14,7 @@
         data-aos-delay="200"
         class="md:w-8/12 2xl:w-6/12"
       >
-        <span v-for="(item,index) in body[0]" :key="index">
-          <span v-if="item.type == 'text'">{{ item.value }}</span>
-          <span v-if="item.type == 'text-bold'">
-            <TextBold>{{ item.value }}</TextBold>
-          </span>
-          <span v-if="item.type == 'highlights'">
-            <span v-for="(highlight, idx) in highlights" :key="idx">
-              <span v-if="(highlights.length - 1) == idx">and</span>
-              <Highlight :data="highlight"></Highlight>
-            </span>
-          </span>
-        </span>
+        <SectionBody :body="body[0]" :highlights="highlights"></SectionBody>
         <NavGuide :to="'/skills'" :delay="800">skills</NavGuide>
       </Section>
     </div>
@@ -32,24 +22,24 @@
 </template>
 
 <script>
+import SectionTitle from "../components/SectionTitle.vue";
+import Section from "../components/Section.vue";
+import SectionBody from "../components/SectionBody.vue";
 import Highlight from "../components/partials/Highlight.vue";
-import TextBold from "../components/partials/TextBold.vue";
 import NavGuide from "../components/partials/NavGuide.vue";
 import Scroller from "../components/partials/Scroller.vue";
-import Section from "../components/Section.vue";
-import SectionTitle from "../components/SectionTitle.vue";
 import firebase from "../firebase";
 import { getDatabase, ref, onValue } from "firebase/database";
 const db = getDatabase(firebase);
 export default {
   name: "About",
   components: {
-    Highlight,
-    TextBold,
     SectionTitle,
+    Section,
+    SectionBody,
+    Highlight,
     Scroller,
     NavGuide,
-    Section,
   },
   data() {
     return {

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="p-6 m-0 overflow-hidden leading-normal text-left transition duration-300 bg-white border border-b-0 border-gray-100 rounded-lg shadow-md dark:border-gray-700 dark:bg-gray-900 lg:m-2 group hover:shadow-xl dark:hover:border-gray-600 lg:max-h-72"
+    class="p-6 m-0 overflow-hidden leading-normal text-left transition-all duration-300 bg-white border border-b-0 border-gray-100 rounded-lg shadow-md dark:border-gray-700 dark:bg-gray-900 lg:m-2 group hover:shadow-xl dark:hover:border-gray-600 lg:max-h-72"
   >
     <div class="flex flex-col justify-between md:flex-row">
       <div class="text-center md:text-left">

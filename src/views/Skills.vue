@@ -1,6 +1,7 @@
 <template>
   <div class="text-gray-300">
     <SectionTitle
+      v-if="title.text != ''"
       :title="title.text"
       :subYellow="title.sub_primary"
       :subGray="title.sub_secondary"
@@ -13,15 +14,7 @@
         data-aos-delay="200"
         class="md:w-8/12 2xl:w-6/12"
       >
-        <span v-for="(item,index) in body[0]" :key="index">
-          <span v-if="item.type == 'text'">{{ item.value }}</span>
-          <span v-if="item.type == 'highlights'">
-            <span v-for="(highlight, idx) in highlights" :key="idx">
-              <span v-if="(highlights.length - 1) == idx">and</span>
-              <Highlight :data="highlight"></Highlight>
-            </span>
-          </span>
-        </span>
+        <SectionBody :body="body[0]" :highlights="highlights"></SectionBody>
       </Section>
       <div
         class="flex flex-wrap items-center justify-center w-full lg:-mt-1 lg:w-5/12 xl:w-5/12 2xl:w-4/12"
@@ -38,7 +31,7 @@
           <img
             data-aos="fade-up"
             data-aos-duration="500"
-            :data-aos-delay="600 + (index * 200)"
+            :data-aos-delay="600 + (index * 150)"
             :src="`./images/${tech.icon}`"
             :alt="tech.name"
             :class="tech.icon == 'bootstrap.svg' ? 'w-auto' :'w-8 xl:w-10'"
@@ -50,7 +43,7 @@
           >{{techName}}</div>
         </a>
       </div>
-      <Scroller class="mt-4 xl:mt-6" :to="'#detail-tools'" :position="'static'" delay="2800" />
+      <Scroller class="mt-4 xl:mt-6" :to="'#detail-tools'" :position="'static'" delay="2200" />
     </div>
     <div id="detail-tools" class="flex flex-col items-center justify-center h-screen">
       <Section
@@ -59,15 +52,7 @@
         data-aos-delay="200"
         class="md:w-8/12 2xl:w-6/12"
       >
-        <span v-for="(item,index) in body[1]" :key="index">
-          <span v-if="item.type == 'text'">{{ item.value }}</span>
-          <span v-if="item.type == 'highlights'">
-            <span v-for="(highlight, idx) in highlights" :key="idx">
-              <span v-if="(highlights.length - 1) == idx">and</span>
-              <Highlight :data="highlight"></Highlight>
-            </span>
-          </span>
-        </span>
+        <SectionBody :body="body[1]" :highlights="highlights"></SectionBody>
       </Section>
       <div class="flex flex-wrap items-center justify-center w-full lg:w-5/12 xl:w-5/12 2xl:w-4/12">
         <a
@@ -83,34 +68,34 @@
           <img
             data-aos="fade-up"
             data-aos-duration="500"
-            :data-aos-delay="600 + (index * 200)"
+            :data-aos-delay="600 + (index * 150)"
             :src="`./images/${tool.icon}`"
             :alt="tool.name"
             class="w-8 h-8 xl:h-10 xl:w-10"
           />
         </a>
       </div>
-      <NavGuide :to="'/projects'" :position="''" delay="3000">projects</NavGuide>
+      <NavGuide :to="'/projects'" :position="''" delay="2300">projects</NavGuide>
     </div>
   </div>
 </template>
 
 <script>
+import Section from "../components/Section.vue";
 import SectionTitle from "../components/SectionTitle.vue";
-import Highlight from "../components/partials/Highlight.vue";
+import SectionBody from "../components/SectionBody.vue";
 import Scroller from "../components/partials/Scroller.vue";
 import NavGuide from "../components/partials/NavGuide.vue";
-import Section from "../components/Section.vue";
 import firebase from "../firebase";
 import { getDatabase, ref, onValue } from "firebase/database";
 const db = getDatabase(firebase);
 export default {
   components: {
     SectionTitle,
-    Highlight,
     Scroller,
     NavGuide,
     Section,
+    SectionBody,
   },
   data() {
     return {
