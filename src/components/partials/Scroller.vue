@@ -1,6 +1,10 @@
 <template>
   <div
-    class="absolute flex items-center justify-center w-full text-gray-400 bottom-28 lg:bottom-24 animate__animated animate__fadeIn"
+    class="flex items-center justify-center w-full text-gray-400 bottom-28 lg:bottom-24"
+    :class="position ? position : 'absolute'"
+    data-aos="fade"
+    data-aos-duration="1000"
+    :data-aos-delay="delay ? delay : '300'"
   >
     <a
       :href="to"
@@ -26,7 +30,7 @@
 
 <script>
 export default {
-  props: ["to"],
+  props: ["to", "position", "delay"],
 };
 </script>
 

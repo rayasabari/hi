@@ -1,6 +1,10 @@
 <template>
   <div class="text-gray-300">
-    <SectionTitle :title="'SKILLS'" :subYellow="'techs'" :subGray="' & stacks'" />
+    <SectionTitle
+      :title="title.text"
+      :subYellow="title.sub_primary"
+      :subGray="title.sub_secondary"
+    />
     <Scroller :to="'#detail-skills'" />
     <div id="detail-skills" class="flex flex-col items-center justify-center h-screen">
       <Section
@@ -9,9 +13,9 @@
         data-aos-delay="200"
         class="md:w-8/12 2xl:w-6/12"
       >
-        <span v-for="item in body" :key="item.order">
+        <span v-for="(item,index) in body[0]" :key="index">
           <span v-if="item.type == 'text'">{{ item.value }}</span>
-          <span v-if="item.type == 'highlight'">
+          <span v-if="item.type == 'highlights'">
             <span v-for="(highlight, idx) in highlights" :key="idx">
               <span v-if="(highlights.length - 1) == idx">and</span>
               <Highlight :data="highlight"></Highlight>
@@ -20,7 +24,7 @@
         </span>
       </Section>
       <div
-        class="flex flex-wrap items-center justify-center w-10/12 mt-2 lg:-mt-1 lg:w-5/12 xl:w-5/12 2xl:w-4/12"
+        class="flex flex-wrap items-center justify-center w-full lg:-mt-1 lg:w-5/12 xl:w-5/12 2xl:w-4/12"
       >
         <a
           v-for="(tech,index) in techs"
@@ -37,8 +41,8 @@
             :data-aos-delay="600 + (index * 200)"
             :src="`./images/${tech.icon}`"
             :alt="tech.name"
-            :class="tech.icon == 'bootstrap.svg' ? 'w-auto' :'w-8 xl:w-12'"
-            class="h-8 xl:h-12"
+            :class="tech.icon == 'bootstrap.svg' ? 'w-auto' :'w-8 xl:w-10'"
+            class="h-8 xl:h-10"
           />
           <div
             v-if="techName == tech.name"
@@ -46,9 +50,26 @@
           >{{techName}}</div>
         </a>
       </div>
-      <div
-        class="flex flex-wrap items-center justify-center w-10/12 mt-2 lg:mt-5 lg:w-5/12 xl:w-5/12 2xl:w-4/12"
+      <Scroller class="mt-4 xl:mt-6" :to="'#detail-tools'" :position="'static'" delay="2800" />
+    </div>
+    <div id="detail-tools" class="flex flex-col items-center justify-center h-screen">
+      <Section
+        data-aos="fade"
+        data-aos-duration="1000"
+        data-aos-delay="200"
+        class="md:w-8/12 2xl:w-6/12"
       >
+        <span v-for="(item,index) in body[1]" :key="index">
+          <span v-if="item.type == 'text'">{{ item.value }}</span>
+          <span v-if="item.type == 'highlights'">
+            <span v-for="(highlight, idx) in highlights" :key="idx">
+              <span v-if="(highlights.length - 1) == idx">and</span>
+              <Highlight :data="highlight"></Highlight>
+            </span>
+          </span>
+        </span>
+      </Section>
+      <div class="flex flex-wrap items-center justify-center w-full lg:w-5/12 xl:w-5/12 2xl:w-4/12">
         <a
           v-for="(tool,index) in tools"
           :key="index"
@@ -57,7 +78,7 @@
           target="_blank"
           @mouseover="toolName = tool.name"
           @mouseleave="toolName = ''"
-          class="flex flex-col items-center justify-center m-4 transition duration-300 opacity-70 dark:opacity-60 saturate-0 dark:brightness-150 brightness-100 hover:brightness-100 dark:hover:brightness-100 hover:saturate-100 hover:opacity-100 dark:hover:opacity-100 dark:hover:contrast-150 hover:contrast-150 filter hover:scale-125"
+          class="flex flex-col items-center justify-center transition duration-300 opacity-70 dark:opacity-60 m-7 saturate-0 dark:brightness-150 brightness-100 hover:brightness-100 dark:hover:brightness-100 hover:saturate-100 hover:opacity-100 dark:hover:opacity-100 dark:hover:contrast-150 hover:contrast-150 filter hover:scale-125"
         >
           <img
             data-aos="fade-up"
@@ -65,12 +86,11 @@
             :data-aos-delay="600 + (index * 200)"
             :src="`./images/${tool.icon}`"
             :alt="tool.name"
-            :class="tool.icon == 'bootstrap.svg' ? 'w-auto' :'w-4 xl:w-6'"
-            class="h-4 xl:h-6"
+            class="w-8 h-8 xl:h-10 xl:w-10"
           />
         </a>
       </div>
-      <NavGuide :to="'/projects'" :position="''" delay="2500">projects</NavGuide>
+      <NavGuide :to="'/projects'" :position="''" delay="3000">projects</NavGuide>
     </div>
   </div>
 </template>
@@ -95,6 +115,11 @@ export default {
   data() {
     return {
       techName: "",
+      title: {
+        text: "",
+        sub_primary: "",
+        sub_secondary: "",
+      },
       body: [],
       highlights: [],
       techs: [],
@@ -109,8 +134,9 @@ export default {
   },
   methods: {
     fetchData() {
-      this.fetchSections("sections/skills/highlights", "highlights");
-      this.fetchSections("sections/skills/body", "body");
+      this.fetchSections("pages/skills/sections/title", "title");
+      this.fetchSections("pages/skills/sections/body", "body");
+      this.fetchSections("pages/skills/sections/highlights", "highlights");
       this.fetchSkills("techs");
       this.fetchSkills("tools");
     },
@@ -130,24 +156,7 @@ export default {
     fetchSections(reference, type) {
       const sectionsRef = ref(db, reference);
       onValue(sectionsRef, (data) => {
-        this[type] = [];
-        data.val().forEach((item) => {
-          if (type == "highlights") {
-            this[type].push({
-              name: item.name,
-              icon: item.icon,
-              link: item.link,
-              color: item.color,
-            });
-          }
-          if (type == "body") {
-            this[type].push({
-              type: item.type,
-              value: item.value,
-              order: item.order,
-            });
-          }
-        });
+        this[type] = data.val();
       });
     },
   },

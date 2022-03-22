@@ -1,6 +1,10 @@
 <template>
   <div class="text-gray-300">
-    <SectionTitle :title="'ABOUT'" :subYellow="'bio'" :subGray="' & resume'" />
+    <SectionTitle
+      :title="title.text"
+      :subYellow="title.sub_primary"
+      :subGray="title.sub_secondary"
+    />
     <Scroller :to="'#detail-about'" />
     <div id="detail-about" class="flex items-center justify-center h-screen">
       <Section
@@ -9,12 +13,12 @@
         data-aos-delay="200"
         class="md:w-8/12 2xl:w-6/12"
       >
-        <span v-for="item in body" :key="item.order">
+        <span v-for="(item,index) in body[0]" :key="index">
           <span v-if="item.type == 'text'">{{ item.value }}</span>
           <span v-if="item.type == 'text-bold'">
             <TextBold>{{ item.value }}</TextBold>
           </span>
-          <span v-if="item.type == 'highlight'">
+          <span v-if="item.type == 'highlights'">
             <span v-for="(highlight, idx) in highlights" :key="idx">
               <span v-if="(highlights.length - 1) == idx">and</span>
               <Highlight :data="highlight"></Highlight>
@@ -49,6 +53,11 @@ export default {
   },
   data() {
     return {
+      title: {
+        text: "",
+        sub_primary: "",
+        sub_secondary: "",
+      },
       body: [],
       highlights: [],
     };
@@ -61,30 +70,14 @@ export default {
   },
   methods: {
     fetchData() {
-      this.fetchSections("sections/about/highlights", "highlights");
-      this.fetchSections("sections/about/body", "body");
+      this.fetchSections("pages/about/sections/title", "title");
+      this.fetchSections("pages/about/sections/body", "body");
+      this.fetchSections("pages/about/sections/highlights", "highlights");
     },
     fetchSections(reference, type) {
       const sectionsRef = ref(db, reference);
       onValue(sectionsRef, (data) => {
-        this[type] = [];
-        data.val().forEach((item) => {
-          if (type == "highlights") {
-            this[type].push({
-              name: item.name,
-              icon: item.icon,
-              link: item.link,
-              color: item.color,
-            });
-          }
-          if (type == "body") {
-            this[type].push({
-              type: item.type,
-              value: item.value,
-              order: item.order,
-            });
-          }
-        });
+        this[type] = data.val();
       });
     },
   },
