@@ -1,62 +1,71 @@
 <template>
   <div class="text-gray-300">
-    <SectionTitle :title="'CONTACTS'" :subYellow="'reach'" :subGray="' & connect'" />
+    <SectionTitle
+      :title="title.text"
+      :subYellow="title.sub_primary"
+      :subGray="title.sub_secondary"
+    />
     <Scroller :to="'#detail-contacts'" />
-    <div
-      id="detail-contacts"
-      class="flex items-center justify-center h-screen"
-    >
+    <div id="detail-contacts" class="flex items-center justify-center h-screen">
       <Section
         data-aos="fade"
         data-aos-duration="1000"
         data-aos-delay="200"
         class="md:w-8/12 2xl:w-6/12"
       >
-        <div>For business inquiries, feel free to get in touch via email at</div>
-        <div class="mt-3">
-          <a
-            data-aos="fade"
-            data-aos-duration="1000"
-            data-aos-delay="600"
-            href="mailto:hi@rayasabari.com"
-            class="flex items-center justify-center text-lg font-medium tracking-wider text-gray-700 transition duration-300 dark:text-gray-300 lg:text-2xl hover:-translate-y-1 group dark:hover:text-yellow-300 hover:text-yellow-400"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-6 h-6 mr-2 text-yellow-400 transition duration-300 dark:text-yellow-300 lg:w-7 lg:h-7 dark:group-hover:text-gray-300 group-hover:text-gray-700"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-              />
-            </svg>
-            hi@rayasabari.com
-          </a>
-        </div>
+        <SectionBody :body="body[0]"></SectionBody>
+        <ButtonEmail v-if="buttons.length > 0" :text="buttons[0].text"></ButtonEmail>
       </Section>
     </div>
   </div>
 </template>
 
 <script>
-import Highlight from "../components/partials/Highlight.vue";
-import Scroller from "../components/partials/Scroller.vue";
 import Section from "../components/Section.vue";
+import SectionBody from "../components/SectionBody.vue";
+import ButtonEmail from "../components/partials/ButtonEmail.vue";
+import Scroller from "../components/partials/Scroller.vue";
 import SectionTitle from "../components/SectionTitle.vue";
+import firebase from "../firebase";
+import { getDatabase, ref, onValue } from "firebase/database";
+const db = getDatabase(firebase);
 export default {
   components: {
     SectionTitle,
     Section,
+    SectionBody,
     Scroller,
-    Highlight,
+    ButtonEmail,
+  },
+  data() {
+    return {
+      title: {
+        text: "",
+        sub_primary: "",
+        sub_secondary: "",
+      },
+      body: [],
+      buttons: [],
+    };
+  },
+  created() {
+    this.fetchData();
   },
   mounted() {
     window.scrollTo(0, 0);
+  },
+  methods: {
+    fetchData() {
+      this.getState("/pages/contacts/sections/title", "title");
+      this.getState("/pages/contacts/sections/body", "body");
+      this.getState("/pages/contacts/sections/buttons", "buttons");
+    },
+    getState(reference, state) {
+      const sectionsRef = ref(db, reference);
+      onValue(sectionsRef, (data) => {
+        this[state] = data.val();
+      });
+    },
   },
 };
 </script>

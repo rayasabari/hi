@@ -1,0 +1,510 @@
+{
+  "master" : {
+    "projects" : [ {
+      "img" : "propertyforsale.id.webp",
+      "link" : "https://www.propertyforsale.id/",
+      "name" : "propertyforsale.id",
+      "order" : "0",
+      "role" : "Front End",
+      "status" : "visit",
+      "tag" : "Web Development",
+      "techs" : [ {
+        "icon" : "nuxt.svg",
+        "link" : "https://nuxtjs.org",
+        "name" : "Nuxt JS"
+      }, {
+        "icon" : "tailwind.svg",
+        "link" : "https://tailwindcss.com",
+        "name" : "Tailwind"
+      } ],
+      "title" : "Landing Page",
+      "visit" : true,
+      "year" : "2022"
+    }, {
+      "img" : "rhrpln2021.webp",
+      "link" : "",
+      "name" : "RHR-PLN 2021",
+      "order" : "1",
+      "role" : "Full Stack",
+      "status" : "private",
+      "tag" : "Web Development",
+      "techs" : [ {
+        "icon" : "laravel.svg",
+        "link" : "https://laravel.com",
+        "name" : "Laravel"
+      }, {
+        "icon" : "vue.svg",
+        "link" : "https://vuejs.org",
+        "name" : "Vue JS"
+      }, {
+        "icon" : "bootstrap.svg",
+        "link" : "https://getbootstrap.com",
+        "name" : "Bootstrap"
+      } ],
+      "title" : "Appraisal System",
+      "visit" : false,
+      "year" : "2021"
+    }, {
+      "img" : "ris2.webp",
+      "link" : "",
+      "name" : "RIS",
+      "order" : "2",
+      "role" : "Full Stack",
+      "status" : "private",
+      "tag" : "Web Development",
+      "techs" : [ {
+        "icon" : "laravel.svg",
+        "link" : "https://laravel.com",
+        "name" : "Laravel"
+      }, {
+        "icon" : "vue.svg",
+        "link" : "https://vuejs.org",
+        "name" : "Vue JS"
+      }, {
+        "icon" : "bootstrap.svg",
+        "link" : "https://getbootstrap.com",
+        "name" : "Bootstrap"
+      } ],
+      "title" : "ERP System",
+      "visit" : false,
+      "year" : "2020"
+    }, {
+      "img" : "rantaka.id.webp",
+      "link" : "https://rantaka.id",
+      "name" : "rantaka.id",
+      "order" : "3",
+      "role" : "Full Stack",
+      "status" : "visit",
+      "tag" : "Web Development",
+      "techs" : [ {
+        "icon" : "laravel.svg",
+        "link" : "https://laravel.com",
+        "name" : "Laravel"
+      }, {
+        "icon" : "jquery.svg",
+        "link" : "https://jquery.com/",
+        "name" : "jQuery"
+      }, {
+        "icon" : "bootstrap.svg",
+        "link" : "https://getbootstrap.com",
+        "name" : "Bootstrap"
+      } ],
+      "title" : "Property Management",
+      "visit" : true,
+      "year" : "2019"
+    }, {
+      "img" : "sra.webp",
+      "link" : "",
+      "name" : "SRA Auction",
+      "order" : "4",
+      "role" : "Full Stack",
+      "status" : "offline",
+      "tag" : "Web Development",
+      "techs" : [ {
+        "icon" : "laravel.svg",
+        "link" : "https://laravel.com",
+        "name" : "Laravel"
+      }, {
+        "icon" : "jquery.svg",
+        "link" : "https://jquery.com/",
+        "name" : "jQuery"
+      }, {
+        "icon" : "bootstrap.svg",
+        "link" : "https://getbootstrap.com",
+        "name" : "Bootstrap"
+      } ],
+      "title" : "E-Auction",
+      "visit" : false,
+      "year" : "2019"
+    }, {
+      "img" : "rhr.co.id.webp",
+      "link" : "https://kjpp.rhr.co.id",
+      "name" : "rhr.co.id",
+      "order" : "5",
+      "role" : "Full Stack",
+      "status" : "visit",
+      "tag" : "Web Development",
+      "techs" : [ {
+        "icon" : "wordpress.svg",
+        "link" : "https://wordpress.com",
+        "name" : "Wordpress"
+      } ],
+      "title" : "Company Profile",
+      "visit" : true,
+      "year" : "2019"
+    }, {
+      "img" : "rhrpln2018.webp",
+      "link" : "",
+      "name" : "RHR-PLN 2018",
+      "order" : "6",
+      "role" : "Full Stack",
+      "status" : "private",
+      "tag" : "Web Development",
+      "techs" : [ {
+        "icon" : "laravel.svg",
+        "link" : "https://laravel.com",
+        "name" : "Laravel"
+      }, {
+        "icon" : "jquery.svg",
+        "link" : "https://jquery.com/",
+        "name" : "jQuery"
+      }, {
+        "icon" : "bootstrap.svg",
+        "link" : "https://getbootstrap.com",
+        "name" : "Bootstrap"
+      } ],
+      "title" : "Appraisal System",
+      "visit" : false,
+      "year" : "2018"
+    }, {
+      "img" : "sispro.webp",
+      "link" : "",
+      "name" : "Sispro",
+      "order" : "7",
+      "role" : "Full Stack",
+      "status" : "private",
+      "tag" : "Web Development",
+      "techs" : [ {
+        "icon" : "codeigniter.svg",
+        "link" : "https://codeigniter.com",
+        "name" : "Codeigniter"
+      }, {
+        "icon" : "jquery.svg",
+        "link" : "https://jquery.com/",
+        "name" : "jQuery"
+      }, {
+        "icon" : "bootstrap.svg",
+        "link" : "https://getbootstrap.com",
+        "name" : "Bootstrap"
+      } ],
+      "title" : "Appraisal System",
+      "visit" : false,
+      "year" : "2017"
+    }, {
+      "img" : "ekonomibiru.webp",
+      "link" : "http://ekonomibiru.org",
+      "name" : "ekonomibiru.org",
+      "order" : "8",
+      "role" : "Full Stack",
+      "status" : "visit",
+      "tag" : "Web Development",
+      "techs" : [ {
+        "icon" : "wordpress.svg",
+        "link" : "https://wordpress.com",
+        "name" : "Wordpress"
+      } ],
+      "title" : "Web & Blog",
+      "visit" : true,
+      "year" : "2013"
+    }, {
+      "img" : "hbn.webp",
+      "link" : "https://hbn-group.com",
+      "name" : "HBN Group",
+      "order" : "9",
+      "role" : "Front End",
+      "status" : "visit",
+      "tag" : "Web Development",
+      "techs" : [ {
+        "icon" : "html5.svg",
+        "link" : "https://www.w3schools.com/html/",
+        "name" : "HTML 5"
+      }, {
+        "icon" : "css3.svg",
+        "link" : "https://web.dev/learn/css/",
+        "name" : "CSS 3"
+      }, {
+        "icon" : "jquery.svg",
+        "link" : "https://jquery.com/",
+        "name" : "jQuery"
+      } ],
+      "title" : "Company Profile",
+      "visit" : true,
+      "year" : "2013"
+    }, {
+      "img" : "oss.webp",
+      "link" : "",
+      "name" : "Ocean Seven",
+      "order" : "10",
+      "role" : "Front End",
+      "status" : "offline",
+      "tag" : "Web Development",
+      "techs" : [ {
+        "icon" : "html5.svg",
+        "link" : "https://www.w3schools.com/html/",
+        "name" : "HTML 5"
+      }, {
+        "icon" : "css3.svg",
+        "link" : "https://web.dev/learn/css/",
+        "name" : "CSS 3"
+      }, {
+        "icon" : "jquery.svg",
+        "link" : "https://jquery.com/",
+        "name" : "jQuery"
+      } ],
+      "title" : "Landing Page",
+      "visit" : false,
+      "year" : "2012"
+    }, {
+      "img" : "icodea.webp",
+      "link" : "",
+      "name" : "Icodea Social",
+      "order" : "11",
+      "role" : "Front End",
+      "status" : "offline",
+      "tag" : "Web Development",
+      "techs" : [ {
+        "icon" : "html5.svg",
+        "link" : "https://www.w3schools.com/html/",
+        "name" : "HTML 5"
+      }, {
+        "icon" : "css3.svg",
+        "link" : "https://web.dev/learn/css/",
+        "name" : "CSS 3"
+      } ],
+      "title" : "Twitter Client",
+      "visit" : false,
+      "year" : "2012"
+    } ],
+    "techs" : [ {
+      "icon" : "laravel.svg",
+      "link" : "https://laravel.com",
+      "name" : "Laravel",
+      "order" : "0"
+    }, {
+      "icon" : "tailwind.svg",
+      "link" : "https://tailwindcss.com",
+      "name" : "Tailwind",
+      "order" : "1"
+    }, {
+      "icon" : "vue.svg",
+      "link" : "https://vuejs.org",
+      "name" : "Vue JS",
+      "order" : "2"
+    }, {
+      "icon" : "nuxt.svg",
+      "link" : "https://nuxtjs.org/",
+      "name" : "Nuxt JS",
+      "order" : "3"
+    }, {
+      "icon" : "react.svg",
+      "link" : "https://reactjs.org/",
+      "name" : "React JS",
+      "order" : "4"
+    }, {
+      "icon" : "next.webp",
+      "link" : "https://nextjs.org/",
+      "name" : "Next JS",
+      "order" : "5"
+    }, {
+      "icon" : "codeigniter.svg",
+      "link" : "https://codeigniter.com\"",
+      "name" : "Codeigniter",
+      "order" : "6"
+    }, {
+      "icon" : "bootstrap.svg",
+      "link" : "https://getbootstrap.com",
+      "name" : "Bootstrap",
+      "order" : "7"
+    }, {
+      "icon" : "jquery.svg",
+      "link" : "https://jquery.com/",
+      "name" : "jQuery",
+      "order" : "8"
+    }, {
+      "icon" : "wordpress.svg",
+      "link" : "https://wordpress.com",
+      "name" : "Wordpress",
+      "order" : "9"
+    }, {
+      "icon" : "mysql.svg",
+      "link" : "https://www.mysql.com/",
+      "name" : "MySQL",
+      "order" : "10"
+    }, {
+      "icon" : "firebase.svg",
+      "link" : "https://firebase.google.com/",
+      "name" : "Firebase",
+      "order" : "11"
+    } ],
+    "tools" : [ {
+      "desc" : "Code Editor",
+      "icon" : "vscode.svg",
+      "link" : "https://code.visualstudio.com/",
+      "name" : "VS Code",
+      "order" : "0"
+    }, {
+      "desc" : "Version Control",
+      "icon" : "git.svg",
+      "link" : "https://git-scm.com/",
+      "name" : "Git",
+      "order" : "1"
+    }, {
+      "desc" : "Database Management",
+      "icon" : "tableplus.webp",
+      "link" : "https://tableplus.com",
+      "name" : "TablePlus",
+      "order" : "2"
+    }, {
+      "desc" : "Local Development Environment",
+      "icon" : "valet.webp",
+      "link" : "https://github.com/laravel/valet",
+      "name" : "Laravel Valet",
+      "order" : "3"
+    }, {
+      "desc" : "Local Development Environment",
+      "icon" : "wamp.svg",
+      "link" : "https://www.wampserver.com/en/",
+      "name" : "WAMP Server",
+      "order" : "4"
+    }, {
+      "desc" : "REST Client",
+      "icon" : "postman.svg",
+      "link" : "https://www.postman.com",
+      "name" : "Postman",
+      "order" : "5"
+    }, {
+      "desc" : "SSH Client",
+      "icon" : "termius.svg",
+      "link" : "https://termius.com/",
+      "name" : "Termius",
+      "order" : "6"
+    }, {
+      "desc" : "FTP Client",
+      "icon" : "commanderone.webp",
+      "link" : "https://mac.eltima.com/file-manager.html",
+      "name" : "Commander One",
+      "order" : "7"
+    }, {
+      "desc" : "FTP Client",
+      "icon" : "filezilla.svg",
+      "link" : "https://filezilla-project.org/",
+      "name" : "Filezilla",
+      "order" : "8"
+    }, {
+      "desc" : "Repository Hosting",
+      "icon" : "github.svg",
+      "link" : "https://github.com/",
+      "name" : "Github",
+      "order" : "9"
+    }, {
+      "desc" : "Repository Hosting",
+      "icon" : "bitbucket.svg",
+      "link" : "https://bitbucket.org/",
+      "name" : "Bitbucket",
+      "order" : "10"
+    } ]
+  },
+  "pages" : {
+    "about" : {
+      "sections" : {
+        "body" : [ [ {
+          "order" : 0,
+          "type" : "text",
+          "value" : "I am currently working as a"
+        }, {
+          "order" : 1,
+          "type" : "text-bold",
+          "value" : "Full Stack Developer"
+        }, {
+          "order" : 2,
+          "type" : "text",
+          "value" : "at public appraiser company in Jakarta. I enjoy building and enhance the web apps using"
+        }, {
+          "order" : 3,
+          "type" : "highlights"
+        }, {
+          "order" : 4,
+          "type" : "text",
+          "value" : ". I also have a good taste in"
+        }, {
+          "order" : 5,
+          "type" : "text-bold",
+          "value" : "UI/UX Design"
+        } ] ],
+        "highlights" : [ {
+          "color" : "text-rose-500",
+          "icon" : [ "fab", "laravel" ],
+          "link" : "https://laravel.com/",
+          "name" : "Laravel",
+          "order" : 0
+        }, {
+          "color" : "text-green-500",
+          "icon" : [ "fab", "vuejs" ],
+          "link" : "https://vuejs.org/",
+          "name" : "Vue JS",
+          "order" : 1
+        } ],
+        "title" : {
+          "sub_primary" : "bio ",
+          "sub_secondary" : "& resume",
+          "text" : "ABOUT"
+        }
+      }
+    },
+    "contacts" : {
+      "sections" : {
+        "body" : [ [ {
+          "order" : 0,
+          "type" : "text",
+          "value" : "For business inquiries, feel free to get in touch at:"
+        } ] ],
+        "buttons" : [ {
+          "text" : "hi@rayasabari.com",
+          "type" : "email"
+        } ],
+        "title" : {
+          "sub_primary" : "reach ",
+          "sub_secondary" : "& connect",
+          "text" : "CONTACTS"
+        }
+      }
+    },
+    "projects" : {
+      "sections" : {
+        "title" : {
+          "sub_primary" : "portfolio  ",
+          "sub_secondary" : "& creations",
+          "text" : "PROJECTS"
+        }
+      }
+    },
+    "skills" : {
+      "sections" : {
+        "body" : [ [ {
+          "order" : 0,
+          "type" : "text",
+          "value" : "I have 5+ years experiences in the web development with"
+        }, {
+          "order" : 2,
+          "type" : "highlights"
+        }, {
+          "order" : 2,
+          "type" : "text",
+          "value" : "skillset. So, I am pretty confident in building apps using these techs:"
+        } ], [ {
+          "order" : 1,
+          "type" : "text",
+          "value" : "In my daily working on web development, I take a fancy to using these cool tools:"
+        } ] ],
+        "highlights" : [ {
+          "color" : "text-indigo-400",
+          "icon" : [ "fab", "php" ],
+          "link" : "https://www.php.net/",
+          "name" : "PHP",
+          "order" : 0
+        }, {
+          "color" : "text-yellow-400",
+          "icon" : [ "fab", "js" ],
+          "link" : "https://www.javascript.com/",
+          "name" : "Javascript",
+          "order" : 1
+        } ],
+        "title" : {
+          "sub_primary" : "stacks ",
+          "sub_secondary" : "& techs",
+          "text" : "SKILLS"
+        }
+      }
+    }
+  }
+}

@@ -1,12 +1,12 @@
 <template>
-  <div class="text-gray-300">
+  <div>
     <SectionTitle
       v-if="title.text != ''"
       :title="title.text"
       :subYellow="title.sub_primary"
       :subGray="title.sub_secondary"
     />
-    <Scroller :to="'#detail-about'"/>
+    <Scroller :to="'#detail-about'" />
     <div id="detail-about" class="flex items-center justify-center h-screen">
       <Section
         data-aos="fade"
@@ -60,14 +60,14 @@ export default {
   },
   methods: {
     fetchData() {
-      this.fetchSections("pages/about/sections/title", "title");
-      this.fetchSections("pages/about/sections/body", "body");
-      this.fetchSections("pages/about/sections/highlights", "highlights");
+      this.getState("pages/about/sections/title", "title");
+      this.getState("pages/about/sections/body", "body");
+      this.getState("pages/about/sections/highlights", "highlights");
     },
-    fetchSections(reference, type) {
+    getState(reference, state) {
       const sectionsRef = ref(db, reference);
       onValue(sectionsRef, (data) => {
-        this[type] = data.val();
+        this[state] = data.val();
       });
     },
   },

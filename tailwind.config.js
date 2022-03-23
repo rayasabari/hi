@@ -22,8 +22,9 @@ module.exports = {
         'ultra-wide': '0.15em'
       },
       fontSize: {
-        '3xs': ['0.5rem', { lineHeight: '0.75rem' }],
-        '2xs': ['0.65rem', { lineHeight: '0.85rem' }],
+        '4xs': ['0.3rem', { lineHeight: '0.5rem' }],
+        '3xs': ['0.55rem', { lineHeight: '0.75rem' }],
+        '2xs': ['0.6rem', { lineHeight: '0.8rem' }],
         '9xl': ['8rem', { lineHeight: '1' }],
       },
       fontFamily: {
