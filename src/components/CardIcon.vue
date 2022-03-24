@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-wrap items-center justify-center w-full lg:-mt-1 lg:w-5/12 xl:w-5/12 2xl:w-4/12"
+    class="flex flex-wrap items-center justify-center w-10/12 mt-2 lg:-mt-1 md:w-7/12 lg:w-7/12 xl:w-6/12 2xl:w-5/12"
   >
     <a
       v-for="(item,index) in items"
@@ -9,7 +9,7 @@
       target="_blank"
       @mouseover="itemName = item.name"
       @mouseleave="itemName = ''"
-      class="flex flex-col items-center justify-center transition duration-300 opacity-70 dark:opacity-60 m-7 saturate-0 dark:brightness-150 brightness-100 hover:brightness-100 dark:hover:brightness-100 hover:saturate-100 hover:opacity-100 dark:hover:opacity-100 dark:hover:contrast-150 hover:contrast-150 filter hover:scale-125"
+      class="flex flex-col items-center justify-center m-5 transition duration-300 opacity-70 dark:opacity-60 lg:m-7 saturate-0 dark:brightness-150 brightness-100 hover:brightness-100 dark:hover:brightness-100 hover:saturate-100 hover:opacity-100 dark:hover:opacity-100 dark:hover:contrast-150 hover:contrast-150 filter hover:scale-125"
     >
       <img
         data-aos="fade-up"
@@ -17,8 +17,8 @@
         :data-aos-delay="600 + (index * 150)"
         :src="`./images/${item.icon}`"
         :alt="item.name"
-        :class="item.icon == 'bootstrap.svg' ? 'w-auto' :'w-8 xl:w-10'"
-        class="h-8 xl:h-10"
+        :class="item.icon == 'bootstrap.svg' ? 'w-auto' :'w-6 lg:w-8 xl:w-10'"
+        class="h-6 lg:h-8 xl:h-10"
       />
       <div
         v-if="itemName == item.name"
