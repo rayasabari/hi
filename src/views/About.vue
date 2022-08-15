@@ -15,6 +15,7 @@
         class="md:w-8/12 2xl:w-6/12"
       >
         <SectionBody :body="body[0]" :highlights="highlights"></SectionBody>
+        <ButtonCv />
         <NavGuide :to="'/skills'" :delay="800">skills</NavGuide>
       </Section>
     </div>
@@ -30,6 +31,7 @@ import NavGuide from "../components/partials/NavGuide.vue";
 import Scroller from "../components/partials/Scroller.vue";
 import firebase from "../firebase";
 import { getDatabase, ref, onValue } from "firebase/database";
+import ButtonCv from "../components/partials/ButtonCV.vue";
 const db = getDatabase(firebase);
 export default {
   name: "About",
@@ -40,6 +42,7 @@ export default {
     Highlight,
     Scroller,
     NavGuide,
+    ButtonCv,
   },
   data() {
     return {
