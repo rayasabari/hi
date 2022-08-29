@@ -15,7 +15,7 @@
         class="md:w-8/12 2xl:w-6/12"
       >
         <SectionBody :body="body[0]" :highlights="highlights"></SectionBody>
-        <ButtonCv />
+        <ButtonCv v-if="title.text" />
         <NavGuide :to="'/skills'" :delay="800">skills</NavGuide>
       </Section>
     </div>
