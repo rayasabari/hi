@@ -16,7 +16,7 @@
       >
         <SectionBody :body="body[0]" :highlights="highlights"></SectionBody>
         <ButtonCv v-if="title.text" />
-        <NavGuide :to="'/skills'" :delay="800">skills</NavGuide>
+        <NavGuide v-if="title.text" :to="'/skills'" :delay="800">skills</NavGuide>
       </Section>
     </div>
   </div>
