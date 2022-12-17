@@ -2,14 +2,13 @@ import { initializeApp } from "firebase/app";
 
 // TODO: Replace with your app's Firebase project configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDY6V_xKCkE7EaA4065Xu4O0EJ2jzspdGs",
-  authDomain: "rayasabari-1a9cc.firebaseapp.com",
-  databaseURL:
-    "https://rayasabari-1a9cc-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "rayasabari-1a9cc",
-  storageBucket: "rayasabari-1a9cc.appspot.com",
-  messagingSenderId: "677200529145",
-  appId: "1:677200529145:web:463776d85274387ab08428",
+  apiKey: process.env.VUE_APP_FIREBASE_API_KEY,
+  authDomain: process.env.VUE_APP_FIREBASE_AUTH_DOMAIN,
+  databaseURL: process.env.VUE_APP_FIREBASE_DATABASE_URL,
+  projectId: process.env.VUE_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.VUE_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.VUE_APP_FIREBASE_MESSANGING_SENDER_ID,
+  appId: process.env.VUE_APP_FIREBASE_APP_ID
 };
 
 const firebase = initializeApp(firebaseConfig);
