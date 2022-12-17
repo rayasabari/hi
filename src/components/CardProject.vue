@@ -15,7 +15,7 @@
       <div class="flex justify-center mt-2 space-x-3 lg:mt-0">
         <span v-for="(tech, index) in project.techs" :key="index">
           <img
-            :src="`./images/${tech.icon}`"
+            :src="`./images/logo/${tech.icon}`"
             :alt="tech.name"
             v-tooltip="tech.name"
             :class="tech.icon == 'bootstrap.svg' ? 'w-auto' :'w-5'"

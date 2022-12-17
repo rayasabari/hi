@@ -4,7 +4,7 @@
     <div class="flex justify-center w-full lg:justify-start lg:pl-6">
       <div data-aos="fade" data-aos-duration="1000" class="z-10 flex items-center justify-between w-11/12 py-4 lg:w-auto">
         <router-link exact active-class="dark:text-gray-300" to="/" class="flex items-center text-2xl italic font-semibold ">
-          <img :src="`images/rysb-logo-for-${darkMode}.webp`" class="h-5" alt="RYSB Logo">
+          <img :src="`images/logo/rysb-logo-for-${darkMode}.webp`" class="h-5" alt="RYSB Logo">
         </router-link>
         <button @click="open = !open" class="block lg:hidden">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

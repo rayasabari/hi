@@ -16,7 +16,7 @@
           data-aos="fade-up"
           data-aos-duration="500"
           :data-aos-delay="600 + (index * 150)"
-          :src="`./images/${item.icon}`"
+          :src="`./images/logo/${item.icon}`"
           :alt="item.name"
         />
       </div>
