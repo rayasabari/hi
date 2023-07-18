@@ -15,18 +15,18 @@
         <font-awesome-icon :icon="['fab','linkedin']" />
       </a>
       <a
+        aria-label="Github"
+        class="transition duration-300 hover:text-yellow-400 dark:hover:text-yellow-300"
+        href="https://github.com/rayasabari"
+      >
+        <font-awesome-icon :icon="['fab','github']" />
+      </a>
+      <a
         aria-label="Instagram"
         class="transition duration-300 hover:text-yellow-400 dark:hover:text-yellow-300"
         href="https://instagram.com/rayasabari"
       >
         <font-awesome-icon :icon="['fab','instagram']" />
-      </a>
-      <a
-        aria-label="Facebook"
-        class="transition duration-300 hover:text-yellow-400 dark:hover:text-yellow-300"
-        href="https://www.facebook.com/rayasabari"
-      >
-        <font-awesome-icon :icon="['fab','facebook']" />
       </a>
       <a
         aria-label="Twitter"
@@ -36,11 +36,11 @@
         <font-awesome-icon :icon="['fab','twitter']" />
       </a>
       <a
-        aria-label="Github"
+        aria-label="Youtube"
         class="transition duration-300 hover:text-yellow-400 dark:hover:text-yellow-300"
-        href="https://github.com/rayasabari"
+        href="https://www.youtube.com/rayasabari"
       >
-        <font-awesome-icon :icon="['fab','github']" />
+        <font-awesome-icon :icon="['fab','youtube']" />
       </a>
     </div>
   </footer>
