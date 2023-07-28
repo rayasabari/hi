@@ -4,57 +4,51 @@
   >
     <div class="flex items-center m-auto font-light transition duration-300 lg:m-0">
       &copy; {{ year }}. Built with &nbsp;
-      <font-awesome-icon :icon="['fas','heart']" />&nbsp; from Indonesia
+      <font-awesome-icon :icon="['fas', 'heart']" />&nbsp; from Indonesia
     </div>
-    <div class="flex justify-between w-40 pb-3 m-auto text-xl lg:pb-0 lg:w-36 lg:text-base lg:m-0">
-      <a
-        aria-label="Linkedin"
-        class="transition duration-300 hover:text-yellow-400 dark:hover:text-yellow-300"
-        href="https://www.linkedin.com/in/rayasabari/"
-      >
-        <font-awesome-icon :icon="['fab','linkedin']" />
-      </a>
-      <a
-        aria-label="Github"
-        class="transition duration-300 hover:text-yellow-400 dark:hover:text-yellow-300"
-        href="https://github.com/rayasabari"
-      >
-        <font-awesome-icon :icon="['fab','github']" />
-      </a>
-      <a
-        aria-label="Instagram"
-        class="transition duration-300 hover:text-yellow-400 dark:hover:text-yellow-300"
-        href="https://instagram.com/rayasabari"
-      >
-        <font-awesome-icon :icon="['fab','instagram']" />
-      </a>
-      <a
-        aria-label="Twitter"
-        class="transition duration-300 hover:text-yellow-400 dark:hover:text-yellow-300"
-        href="https://twitter.com/rayasabari"
-      >
-        <font-awesome-icon :icon="['fab','twitter']" />
-      </a>
-      <a
-        aria-label="Youtube"
-        class="transition duration-300 hover:text-yellow-400 dark:hover:text-yellow-300"
-        href="https://www.youtube.com/rayasabari"
-      >
-        <font-awesome-icon :icon="['fab','youtube']" />
-      </a>
+    <div
+      class="flex justify-between w-40 pb-3 m-auto text-xl lg:pb-0 lg:w-36 lg:text-base lg:m-0"
+    >
+      <SocialIcon
+        v-for="(social, index) in socials"
+        :key="index"
+        :label="social.label"
+        :link="social.link"
+        :icon="social.icon"
+      />
     </div>
   </footer>
 </template>
 
 <script>
+import SocialIcon from './partials/SocialIcon.vue';
+import firebase from "../firebase";
+import { getDatabase, ref, onValue } from "firebase/database";
+const db = getDatabase(firebase);
 export default {
+  components: {
+    SocialIcon
+  },
   data() {
     return {
       year: new Date().getFullYear(),
+      socials: [],
     };
   },
+  created(){
+    this.fetchData();
+  },
+  methods: {
+    fetchData() {
+      this.getState("master/socials", "socials");
+    },
+    getState(reference, state) {
+      const sectionsRef = ref(db, reference);
+      onValue(sectionsRef, (data) => {
+        this[state] = data.val();
+      });
+    }
+  }
 };
 </script>
 
-<style>
-</style>
