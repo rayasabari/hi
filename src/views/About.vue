@@ -15,7 +15,7 @@
         class="md:w-8/12 2xl:w-6/12"
       >
         <SectionBody :body="body[0]" :highlights="highlights"></SectionBody>
-        <ButtonCv v-if="title.text" />
+        <ButtonCv v-if="title.text && showResumeButton" />
         <NavGuide v-if="title.text" :to="'/skills'" :delay="800">skills</NavGuide>
       </Section>
     </div>
@@ -53,6 +53,7 @@ export default {
       },
       body: [],
       highlights: [],
+      showResumeButton: false
     };
   },
   created() {
@@ -66,6 +67,7 @@ export default {
       this.getState("pages/about/sections/title", "title");
       this.getState("pages/about/sections/body", "body");
       this.getState("pages/about/sections/highlights", "highlights");
+      this.getState("pages/about/sections/showResumeButton", "showResumeButton");
     },
     getState(reference, state) {
       const sectionsRef = ref(db, reference);
