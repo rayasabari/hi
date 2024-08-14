@@ -18,7 +18,7 @@
             <CardProject
               data-aos="fade-up"
               data-aos-duration="1000"
-              :data-aos-delay=" (index * 50)"
+              :data-aos-delay="index * 50"
               :img="`./images/projects/${project.img}`"
               :project="project"
             ></CardProject>
@@ -31,13 +31,13 @@
 </template>
 
 <script>
-import CardProject from "../components/CardProject.vue";
-import NavGuide from "../components/partials/NavGuide.vue";
-import Scroller from "../components/partials/Scroller.vue";
-import Section from "../components/Section.vue";
-import SectionTitle from "../components/SectionTitle.vue";
-import firebase from "../firebase";
-import { getDatabase, ref, onValue } from "firebase/database";
+import CardProject from '../components/CardProject.vue';
+import NavGuide from '../components/partials/NavGuide.vue';
+import Scroller from '../components/partials/Scroller.vue';
+import Section from '../components/Section.vue';
+import SectionTitle from '../components/SectionTitle.vue';
+import firebase from '../firebase';
+import { getDatabase, ref, onValue } from 'firebase/database';
 const db = getDatabase(firebase);
 export default {
   components: {
@@ -50,9 +50,9 @@ export default {
   data() {
     return {
       title: {
-        text: "",
-        sub_primary: "",
-        sub_secondary: "",
+        text: '',
+        sub_primary: '',
+        sub_secondary: '',
       },
       projects: [],
     };
@@ -65,8 +65,9 @@ export default {
   },
   methods: {
     fetchData() {
-      this.getState("/pages/projects/sections/title", "title");
-      this.getState("/master/projects", "projects");
+      this.getState('/pages/projects/sections/title', 'title');
+      this.getState('/master/projects', 'projects');
+      this.projects.sort((a, b) => b.year - a.year);
     },
     getState(reference, state) {
       const sectionsRef = ref(db, reference);
@@ -77,6 +78,3 @@ export default {
   },
 };
 </script>
-
-<style>
-</style>
