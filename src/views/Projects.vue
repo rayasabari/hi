@@ -40,6 +40,14 @@ import firebase from '../firebase';
 import { getDatabase, ref, onValue } from 'firebase/database';
 const db = getDatabase(firebase);
 export default {
+  name: 'Projects',
+  metaInfo: {
+    title: 'Skills -',
+    meta: [
+      { name: 'titile', content: 'Projects - Raya Sabari' },
+      { name: 'description', content: 'Works and portfolio' },
+    ],
+  },
   components: {
     SectionTitle,
     Scroller,

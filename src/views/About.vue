@@ -35,6 +35,13 @@ import ButtonCv from '../components/partials/ButtonCV.vue';
 const db = getDatabase(firebase);
 export default {
   name: 'About',
+  metaInfo: {
+    title: 'About -',
+    meta: [
+      { name: 'titile', content: 'About - Raya Sabari' },
+      { name: 'description', content: 'Bio and resume' },
+    ],
+  },
   components: {
     SectionTitle,
     Section,

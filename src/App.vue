@@ -14,6 +14,9 @@ import Footer from './components/Footer.vue';
 import Notiflix from 'notiflix';
 
 export default {
+  metaInfo: {
+    titleTemplate: '%s Raya Sabari',
+  },
   components: {
     Navbar,
     Content,
