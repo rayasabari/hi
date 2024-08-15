@@ -54,8 +54,8 @@ export default {
   metaInfo: {
     title: 'Skills -',
     meta: [
-      { name: 'titile', content: 'Skills - Raya Sabari' },
-      { name: 'description', content: 'Techs and stacks' },
+      { vmid: 'title', name: 'title', content: 'Skills - Raya Sabari' },
+      { vmid: 'description', name: 'description', content: 'Techs and stacks' },
     ],
   },
   components: {

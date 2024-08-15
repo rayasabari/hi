@@ -11,8 +11,8 @@ export default {
   metaInfo: {
     title: '404 -',
     meta: [
-      { name: 'titile', content: '404 - Raya Sabari' },
-      { name: 'description', content: 'Page not found' },
+      { vmid: 'title', name: 'title', content: '404 - Raya Sabari' },
+      { vmid: 'description', name: 'description', content: 'Page not found' },
     ],
   },
   components: {
