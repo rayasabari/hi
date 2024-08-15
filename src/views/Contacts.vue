@@ -30,6 +30,14 @@ import firebase from '../firebase';
 import { getDatabase, ref, onValue } from 'firebase/database';
 const db = getDatabase(firebase);
 export default {
+  name: 'Contacts',
+  metaInfo: {
+    title: 'Contacts -',
+    meta: [
+      { name: 'titile', content: 'Contacts - Raya Sabari' },
+      { name: 'description', content: 'Reach and connect' },
+    ],
+  },
   components: {
     SectionTitle,
     Section,

@@ -7,6 +7,14 @@
 <script>
 import SectionTitle from '../components/SectionTitle.vue';
 export default {
+  name: 'NotFound',
+  metaInfo: {
+    title: '404 -',
+    meta: [
+      { name: 'titile', content: '404 - Raya Sabari' },
+      { name: 'description', content: 'Page not found' },
+    ],
+  },
   components: {
     SectionTitle,
   },

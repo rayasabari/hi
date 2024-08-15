@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+import VueMeta from 'vue-meta'
 
 import 'animate.css'
 import VueTyperPlugin from 'vue-typer'
@@ -20,6 +21,7 @@ import router from './router'
 library.add(faCloudDownloadAlt, faFacebook, faTwitter, faGithub, faLinkedin, faInstagram, faYoutube, faHeart, faPhp, faJs, faLaravel, faVuejs)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
+Vue.use(VueMeta)
 Vue.use(VueTyperPlugin)
 Vue.use(VTooltip)
 Vue.config.productionTip = false
