@@ -16,6 +16,15 @@ import Notiflix from 'notiflix';
 export default {
   metaInfo: {
     titleTemplate: '%s Raya Sabari',
+    meta: [
+      { vmid: 'title', name: 'title', content: 'Raya Sabari — A Full Stack Developer' },
+      {
+        vmid: 'description',
+        name: 'description',
+        content:
+          'Raya Sabari, also known as RYSB, is a Full Stack Developer from Jakarta, Indonesia. He has over 7 years in the web development',
+      },
+    ],
   },
   components: {
     Navbar,

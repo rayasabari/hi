@@ -38,8 +38,8 @@ export default {
   metaInfo: {
     title: 'About -',
     meta: [
-      { name: 'titile', content: 'About - Raya Sabari' },
-      { name: 'description', content: 'Bio and resume' },
+      { vmid: 'title', name: 'title', content: 'About - Raya Sabari' },
+      { vmid: 'description', name: 'description', content: 'Bio and resume' },
     ],
   },
   components: {

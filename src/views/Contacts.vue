@@ -34,8 +34,8 @@ export default {
   metaInfo: {
     title: 'Contacts -',
     meta: [
-      { name: 'titile', content: 'Contacts - Raya Sabari' },
-      { name: 'description', content: 'Reach and connect' },
+      { vmid: 'title', name: 'title', content: 'Contacts - Raya Sabari' },
+      { vmid: 'description', name: 'description', content: 'Reach and connect' },
     ],
   },
   components: {
