@@ -1,5 +1,5 @@
-import firebase from "../firebase";
-import { getDatabase, ref, onValue, child, get } from "firebase/database";
+import firebase from '../firebase';
+import { getDatabase, ref, onValue, child, get } from 'firebase/database';
 
 class FireServices {
   getRef(reference, state) {

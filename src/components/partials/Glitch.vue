@@ -6,34 +6,31 @@
 </template>
 
 <script>
-import GlitchDark from "./GlitchDark.vue";
-import GlitchLight from "./GlitchLight.vue";
+import GlitchDark from './GlitchDark.vue';
+import GlitchLight from './GlitchLight.vue';
 export default {
-  props: ["text"],
+  props: ['text'],
   components: { GlitchDark, GlitchLight },
   data() {
     return {
-      darkMode: "dark",
+      darkMode: 'dark',
     };
   },
   created() {
-    const currentMode = localStorage.getItem("darkMode");
+    const currentMode = localStorage.getItem('darkMode');
     this.setMode(currentMode);
   },
   mounted() {
-    this.$root.$on("changeMode", (mode) => {
+    this.$root.$on('changeMode', (mode) => {
       this.setMode(mode);
     });
   },
   methods: {
     setMode(mode) {
-      mode === null || mode === "dark"
-        ? (this.darkMode = "dark")
-        : (this.darkMode = "light");
+      mode === null || mode === 'dark'
+        ? (this.darkMode = 'dark')
+        : (this.darkMode = 'light');
     },
   },
 };
 </script>
-
-<style>
-</style>

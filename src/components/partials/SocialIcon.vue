@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: "SocialIcon",
-  props: ["label", "link", "icon"],
+  name: 'SocialIcon',
+  props: ['label', 'link', 'icon'],
 };
 </script>

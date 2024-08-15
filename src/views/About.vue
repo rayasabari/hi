@@ -23,18 +23,18 @@
 </template>
 
 <script>
-import SectionTitle from "../components/SectionTitle.vue";
-import Section from "../components/Section.vue";
-import SectionBody from "../components/SectionBody.vue";
-import Highlight from "../components/partials/Highlight.vue";
-import NavGuide from "../components/partials/NavGuide.vue";
-import Scroller from "../components/partials/Scroller.vue";
-import firebase from "../firebase";
-import { getDatabase, ref, onValue } from "firebase/database";
-import ButtonCv from "../components/partials/ButtonCV.vue";
+import SectionTitle from '../components/SectionTitle.vue';
+import Section from '../components/Section.vue';
+import SectionBody from '../components/SectionBody.vue';
+import Highlight from '../components/partials/Highlight.vue';
+import NavGuide from '../components/partials/NavGuide.vue';
+import Scroller from '../components/partials/Scroller.vue';
+import firebase from '../firebase';
+import { getDatabase, ref, onValue } from 'firebase/database';
+import ButtonCv from '../components/partials/ButtonCV.vue';
 const db = getDatabase(firebase);
 export default {
-  name: "About",
+  name: 'About',
   components: {
     SectionTitle,
     Section,
@@ -47,13 +47,13 @@ export default {
   data() {
     return {
       title: {
-        text: "",
-        sub_primary: "",
-        sub_secondary: "",
+        text: '',
+        sub_primary: '',
+        sub_secondary: '',
       },
       body: [],
       highlights: [],
-      showResumeButton: false
+      showResumeButton: false,
     };
   },
   created() {
@@ -64,10 +64,10 @@ export default {
   },
   methods: {
     fetchData() {
-      this.getState("pages/about/sections/title", "title");
-      this.getState("pages/about/sections/body", "body");
-      this.getState("pages/about/sections/highlights", "highlights");
-      this.getState("pages/about/sections/showResumeButton", "showResumeButton");
+      this.getState('pages/about/sections/title', 'title');
+      this.getState('pages/about/sections/body', 'body');
+      this.getState('pages/about/sections/highlights', 'highlights');
+      this.getState('pages/about/sections/showResumeButton', 'showResumeButton');
     },
     getState(reference, state) {
       const sectionsRef = ref(db, reference);
@@ -78,6 +78,3 @@ export default {
   },
 };
 </script>
-
-<style>
-</style>

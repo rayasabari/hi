@@ -3,7 +3,7 @@
     class="flex flex-wrap items-center justify-center w-10/12 mt-2 lg:-mt-1 md:w-7/12 lg:w-7/12 xl:w-6/12 2xl:w-5/12"
   >
     <a
-      v-for="(item,index) in items"
+      v-for="(item, index) in items"
       :key="index"
       :href="item.link"
       target="_blank"
@@ -15,7 +15,7 @@
         <img
           data-aos="fade-up"
           data-aos-duration="500"
-          :data-aos-delay="600 + (index * 150)"
+          :data-aos-delay="600 + index * 150"
           :src="`./images/logo/${item.icon}`"
           :alt="item.name"
         />
@@ -23,22 +23,21 @@
       <div
         v-if="itemName == item.name"
         class="absolute mt-16 text-center text-gray-700 transition duration-300 dark:text-gray-300 text-3xs lg:text-2xs font-extralight lg:mt-20"
-      >{{itemName}}</div>
+      >
+        {{ itemName }}
+      </div>
     </a>
   </div>
 </template>
 
 <script>
 export default {
-  name: "CardItem",
-  props: ["items"],
+  name: 'CardItem',
+  props: ['items'],
   data() {
     return {
-      itemName: "",
+      itemName: '',
     };
   },
 };
 </script>
-
-<style>
-</style>

@@ -21,13 +21,13 @@
 </template>
 
 <script>
-import Section from "../components/Section.vue";
-import SectionBody from "../components/SectionBody.vue";
-import ButtonEmail from "../components/partials/ButtonEmail.vue";
-import Scroller from "../components/partials/Scroller.vue";
-import SectionTitle from "../components/SectionTitle.vue";
-import firebase from "../firebase";
-import { getDatabase, ref, onValue } from "firebase/database";
+import Section from '../components/Section.vue';
+import SectionBody from '../components/SectionBody.vue';
+import ButtonEmail from '../components/partials/ButtonEmail.vue';
+import Scroller from '../components/partials/Scroller.vue';
+import SectionTitle from '../components/SectionTitle.vue';
+import firebase from '../firebase';
+import { getDatabase, ref, onValue } from 'firebase/database';
 const db = getDatabase(firebase);
 export default {
   components: {
@@ -40,9 +40,9 @@ export default {
   data() {
     return {
       title: {
-        text: "",
-        sub_primary: "",
-        sub_secondary: "",
+        text: '',
+        sub_primary: '',
+        sub_secondary: '',
       },
       body: [],
       buttons: [],
@@ -56,9 +56,9 @@ export default {
   },
   methods: {
     fetchData() {
-      this.getState("/pages/contacts/sections/title", "title");
-      this.getState("/pages/contacts/sections/body", "body");
-      this.getState("/pages/contacts/sections/buttons", "buttons");
+      this.getState('/pages/contacts/sections/title', 'title');
+      this.getState('/pages/contacts/sections/body', 'body');
+      this.getState('/pages/contacts/sections/buttons', 'buttons');
     },
     getState(reference, state) {
       const sectionsRef = ref(db, reference);
@@ -69,6 +69,3 @@ export default {
   },
 };
 </script>
-
-<style>
-</style>

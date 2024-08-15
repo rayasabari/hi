@@ -3,12 +3,9 @@
 </template>
 
 <script>
-import VueTextGlitch from "vue-text-glitch";
+import VueTextGlitch from 'vue-text-glitch';
 export default {
-  props: ["text"],
+  props: ['text'],
   components: { VueTextGlitch },
 };
 </script>
-
-<style>
-</style>
