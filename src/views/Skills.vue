@@ -17,7 +17,12 @@
         <SectionBody :body="body[0]" :highlights="highlights"></SectionBody>
       </Section>
       <CardIcon :items="techs"></CardIcon>
-      <Scroller class="mt-4 xl:mt-6" :to="'#detail-tools'" :position="'static'" delay="2200" />
+      <Scroller
+        class="mt-4 xl:mt-6"
+        :to="'#detail-tools'"
+        :position="'static'"
+        delay="2200"
+      />
     </div>
     <div id="detail-tools" class="flex flex-col items-center justify-center h-screen">
       <Section
@@ -35,14 +40,14 @@
 </template>
 
 <script>
-import Section from "../components/Section.vue";
-import SectionTitle from "../components/SectionTitle.vue";
-import SectionBody from "../components/SectionBody.vue";
-import CardIcon from "../components/CardIcon.vue";
-import Scroller from "../components/partials/Scroller.vue";
-import NavGuide from "../components/partials/NavGuide.vue";
-import firebase from "../firebase";
-import { getDatabase, ref, onValue } from "firebase/database";
+import Section from '../components/Section.vue';
+import SectionTitle from '../components/SectionTitle.vue';
+import SectionBody from '../components/SectionBody.vue';
+import CardIcon from '../components/CardIcon.vue';
+import Scroller from '../components/partials/Scroller.vue';
+import NavGuide from '../components/partials/NavGuide.vue';
+import firebase from '../firebase';
+import { getDatabase, ref, onValue } from 'firebase/database';
 const db = getDatabase(firebase);
 export default {
   components: {
@@ -56,9 +61,9 @@ export default {
   data() {
     return {
       title: {
-        text: "",
-        sub_primary: "",
-        sub_secondary: "",
+        text: '',
+        sub_primary: '',
+        sub_secondary: '',
       },
       body: [],
       highlights: [],
@@ -74,11 +79,11 @@ export default {
   },
   methods: {
     fetchData() {
-      this.getState("pages/skills/sections/title", "title");
-      this.getState("pages/skills/sections/body", "body");
-      this.getState("pages/skills/sections/highlights", "highlights");
-      this.getState("master/techs", "techs");
-      this.getState("master/tools", "tools");
+      this.getState('pages/skills/sections/title', 'title');
+      this.getState('pages/skills/sections/body', 'body');
+      this.getState('pages/skills/sections/highlights', 'highlights');
+      this.getState('master/techs', 'techs');
+      this.getState('master/tools', 'tools');
     },
     getState(reference, state) {
       const sectionsRef = ref(db, reference);
@@ -89,6 +94,3 @@ export default {
   },
 };
 </script>
-
-<style>
-</style>

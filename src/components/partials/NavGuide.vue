@@ -31,9 +31,6 @@
 
 <script>
 export default {
-  props: ["to", "position", "delay"],
+  props: ['to', 'position', 'delay'],
 };
 </script>
-
-<style>
-</style>

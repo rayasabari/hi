@@ -12,10 +12,7 @@
 
 <script>
 export default {
-  props: ["data"],
-  name: "Highlight",
+  props: ['data'],
+  name: 'Highlight',
 };
 </script>
-
-<style>
-</style>

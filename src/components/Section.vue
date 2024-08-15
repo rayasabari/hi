@@ -8,9 +8,6 @@
 
 <script>
 export default {
-  name: "Section",
+  name: 'Section',
 };
 </script>
-
-<style>
-</style>

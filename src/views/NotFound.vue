@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import SectionTitle from "../components/SectionTitle.vue";
+import SectionTitle from '../components/SectionTitle.vue';
 export default {
   components: {
     SectionTitle,
@@ -15,6 +15,3 @@ export default {
   },
 };
 </script>
-
-<style>
-</style>

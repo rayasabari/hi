@@ -27,9 +27,6 @@
 <script>
 export default {
   name: 'ButtonEmail',
-  props: ['text']
+  props: ['text'],
 };
 </script>
-
-<style>
-</style>

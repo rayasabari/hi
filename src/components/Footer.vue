@@ -22,12 +22,12 @@
 
 <script>
 import SocialIcon from './partials/SocialIcon.vue';
-import firebase from "../firebase";
-import { getDatabase, ref, onValue } from "firebase/database";
+import firebase from '../firebase';
+import { getDatabase, ref, onValue } from 'firebase/database';
 const db = getDatabase(firebase);
 export default {
   components: {
-    SocialIcon
+    SocialIcon,
   },
   data() {
     return {
@@ -35,20 +35,19 @@ export default {
       socials: [],
     };
   },
-  created(){
+  created() {
     this.fetchData();
   },
   methods: {
     fetchData() {
-      this.getState("master/socials", "socials");
+      this.getState('master/socials', 'socials');
     },
     getState(reference, state) {
       const sectionsRef = ref(db, reference);
       onValue(sectionsRef, (data) => {
         this[state] = data.val();
       });
-    }
-  }
+    },
+  },
 };
 </script>
-

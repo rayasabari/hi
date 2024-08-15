@@ -13,11 +13,11 @@
 </template>
 
 <script>
-import Glitch from "@/components/partials/Glitch.vue";
-import Typer from "@/components/partials/Typer.vue";
-import NavGuide from "../components/partials/NavGuide.vue";
+import Glitch from '@/components/partials/Glitch.vue';
+import Typer from '@/components/partials/Typer.vue';
+import NavGuide from '../components/partials/NavGuide.vue';
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
     Glitch,
     Typer,
@@ -25,12 +25,8 @@ export default {
   },
   data() {
     return {
-      title: "HI",
-      tagline: [
-        "I am Raya Sabari",
-        "A Full Stack Developer",
-        "Based in Jakarta",
-      ],
+      title: 'HI',
+      tagline: ['I am Raya Sabari', 'A Full Stack Developer', 'Based in Jakarta'],
     };
   },
 };

@@ -8,10 +8,10 @@
   </div>
 </template>
 <script>
-import Navbar from "./components/Navbar.vue";
-import Content from "./components/Content.vue";
-import Footer from "./components/Footer.vue";
-import Notiflix from "notiflix";
+import Navbar from './components/Navbar.vue';
+import Content from './components/Content.vue';
+import Footer from './components/Footer.vue';
+import Notiflix from 'notiflix';
 
 export default {
   components: {
@@ -102,7 +102,7 @@ export default {
   },
   mounted() {
     this.setViewHeight();
-    window.addEventListener("resize", () => {
+    window.addEventListener('resize', () => {
       this.setViewHeight();
     });
     this.loading();
@@ -110,17 +110,15 @@ export default {
   methods: {
     setViewHeight: function () {
       let vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty("--vh", `${vh}px`);
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
     },
     loading() {
       this.isLoading = true;
-      const currentMode = localStorage.getItem("darkMode");
+      const currentMode = localStorage.getItem('darkMode');
       const svgColor =
-        currentMode === null || currentMode === "dark"
-          ? this.svgDark
-          : this.svgLight;
+        currentMode === null || currentMode === 'dark' ? this.svgDark : this.svgLight;
       Notiflix.Loading.custom({
-        backgroundColor: "transparent",
+        backgroundColor: 'transparent',
         customSvgCode: svgColor,
       });
       Notiflix.Loading.remove(700);
